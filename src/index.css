@@ -1,0 +1,30 @@
+
+:root
+{
+   /* Buttons, Links, Highlights - Trust and Action */
+   --primary-color: #1872ED;
+   /* main Text  - Text and Contrast */
+   --text-color: #212529;
+   /* Headings - Text and Contrast */
+   --heading-text: #343A40 ;
+   /* Neutral Light – Backgrounds */	
+   /* Light Gray (sections or cards) */
+	 --card-color: #F8F9FA ;
+   /* Divider lines, borders */
+	--border-color : #E9ECEF;
+  /* Icons and Badges and Attention Areas */
+  --secondary-accent: #FFC107;
+  /* Success Color – Validation/Positive Actions */
+  /* Deep Green (used in condition passed, bids won) */
+  --success-color: #2E7D32;
+  /* Error Color – Alerts & Errors */
+  /* Bright Red (used in error messages or bid expired) */
+  --error-color: #E53935;
+
+  --home-color: #eff8ff;
+}
+
+/* styles.css or inline */
+body {
+  scroll-behavior: smooth;
+}

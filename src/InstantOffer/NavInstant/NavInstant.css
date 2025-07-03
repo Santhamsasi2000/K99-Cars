@@ -1,0 +1,139 @@
+.nav-instant
+{
+  background-color: var(--primary-color);
+  color: white;
+  padding: 24px 80px;
+}
+
+@media (max-width: 992px) 
+{
+  .nav-instant
+  {
+    padding: 24px 40px;
+  }
+}
+
+@media (max-width: 576px) 
+{
+    .nav-instant
+    {
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      padding: 12px 24px;
+    }
+}
+
+.menu-instant-btn
+{
+    background-color: inherit;
+    border: none;
+    font-size: 22px;
+    color: white;
+}
+
+.dropdown-item
+{
+    color: #868686;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.sign-in
+{
+  background-color: #2379ED;
+}
+
+.sign-in:hover
+{
+  background-color: #3080EF;
+}
+
+/* Car Icon Clicks */
+
+.slide-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 576px;
+  background-color: #fff;
+  z-index: 1050;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 100px;
+}
+
+/* @keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+} */
+
+.slide-btn
+{
+    
+}
+
+/* MenusInstant */
+.instant-nav-btn
+{
+   color: black;
+   background-color: yellow;
+   border: none;
+   border-radius: 50rem;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+/* Light button (Sign in) */
+.light-btn
+{
+  background-color: rgba(33,33,33,.05);
+}
+
+.light-btn:hover
+{
+  background-color: rgba(33, 33, 33, 0.1);
+}
+
+/* Yellow button (Get an offer) */
+.yellow-btn
+{
+  background-color: #ffd94f;
+}
+
+.yellow-btn:hover
+{
+  background-color: #F5C617;
+}
+
+.small-menu
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 768px;
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media (max-width: 768px)
+{
+    #desktopDropdownMenu
+    {
+        display: none !important;
+    }
+}
+

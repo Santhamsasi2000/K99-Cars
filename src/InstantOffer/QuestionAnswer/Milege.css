@@ -1,0 +1,12 @@
+.textBox-card
+{
+    padding: 40px 80px 64px;
+}
+
+@media (max-width: 576px)
+{
+   .textBox-card
+    {
+        padding: 56px 0px 0px;
+    }
+}

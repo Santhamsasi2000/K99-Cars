@@ -1,0 +1,66 @@
+.offerform-card
+{
+    background-color: var(--card-color);
+    width: 100%;
+}
+
+.tab-btn
+{
+    background-color: #F7F7F7;
+    color: #21212180;
+    border: none;
+    padding: 20px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+@media (max-width: 490px) 
+{
+   .tab-btn
+   {
+     font-size: 18px;
+     padding: 15px;
+   } 
+}
+
+@media (max-width: 440px) 
+{
+   .tab-btn
+   {
+     font-size: 16px;
+   } 
+}
+
+@media (max-width: 400px) 
+{
+   .tab-btn
+   {
+     font-size: 14px;
+   } 
+}
+
+@media (max-width: 360px) 
+{
+   .tab-btn
+   {
+     font-size: 12px;
+   } 
+}
+
+.tab-btn:hover
+{
+    color: var(--heading-text);
+}
+
+.tab-btn.active
+{
+    background-color: var(--heading-text);
+    color: white;
+}
+
+.form-content
+{
+    max-height: 300px;
+    height: 100%;
+}
+

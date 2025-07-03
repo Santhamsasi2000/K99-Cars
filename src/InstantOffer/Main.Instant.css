@@ -1,0 +1,43 @@
+.main-instant
+{
+    background-color: #1872ED;
+    min-height: 100vh;
+}
+
+.instant-border
+{
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+@media (max-width: 576px)
+{
+    .instant-border
+    {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: #F7F7F7;
+    }
+}
+
+
+.headings-instant
+{
+    color: #AFAFAF;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.underline-instant
+{
+  /* color: #D5D5D5; */
+
+}
+
+.startover-btn
+{
+    color: #6E6E6E;
+    margin-top: 100px;
+    margin-left: 20px;
+}
