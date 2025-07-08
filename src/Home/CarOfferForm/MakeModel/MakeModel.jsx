@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Select from "react-select";
 import { dataCars } from "./DataCars";
+import "./MakeModel.css";
 
-const CloseDropdown = () => {
+const MakeModel = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
@@ -79,14 +80,39 @@ const CloseDropdown = () => {
     label: year,
   }));
 
+  const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    padding: '8px 12px',      // Inner padding for the main container
+    borderRadius: '4px',      // Optional: Rounded corners
+  }),
+  option: (provided) => ({
+    ...provided,
+    padding: '10px 12px',     // Padding for dropdown items
+  }),
+  singleValue: (provided) => ({
+    ...provided,
+    padding: '4px',           // Padding for the selected value
+  }),
+  input: (provided) => ({
+    ...provided,
+    padding: '4px 0',         // Padding for the typing input
+  }),
+  indicatorSeparator: (provided) => ({
+    ...provided,
+    display: 'none', // Hides the separator
+  }),
+   };
+
   return (
-    <div style={{ padding: "20px", maxWidth: "400px" }}>
-      <label className="mb-1 fw-bold">Year</label>
+    <div className="p-4">
       <Select
+        className="select-dropdown"
+        styles={customStyles}
         options={yearOptions}
         value={selectedYear}
         onChange={handleYearChange}
-        placeholder="Select Year"
+        placeholder="Year"
         onMenuOpen={() => setOpenDropdown("year")}
         onMenuClose={() => {
           if (openDropdown === "year") setOpenDropdown(null);
@@ -94,12 +120,13 @@ const CloseDropdown = () => {
         menuIsOpen={openDropdown === "year"}
       />
 
-      <label className="mt-4 mb-1 fw-bold">Brand</label>
       <Select
+        className="select-dropdown"
+        styles={customStyles}
         options={brandOptions}
         value={selectedBrand}
         onChange={handleBrandChange}
-        placeholder="Select Brand"
+        placeholder="Brand"
         isDisabled={!selectedYear}
         onMenuOpen={() => setOpenDropdown("brand")}
         onMenuClose={() => {
@@ -108,12 +135,13 @@ const CloseDropdown = () => {
         menuIsOpen={openDropdown === "brand"}
       />
 
-      <label className="mt-4 mb-1 fw-bold">Model</label>
       <Select
+        className="select-dropdown"
+        styles={customStyles}
         options={modelOptions}
         value={selectedModel}
         onChange={handleModelChange}
-        placeholder="Select Model"
+        placeholder="Model"
         isDisabled={!selectedBrand}
         onMenuOpen={() => setOpenDropdown("model")}
         onMenuClose={() => {
@@ -122,12 +150,13 @@ const CloseDropdown = () => {
         menuIsOpen={openDropdown === "model"}
       />
 
-      <label className="mt-4 mb-1 fw-bold">Variant</label>
       <Select
+        className="select-dropdown"
+        styles={customStyles}
         options={variantOptions}
         value={selectedVariant}
         onChange={handleVariantChange}
-        placeholder="Select Variant"
+        placeholder="Variant"
         isDisabled={!selectedModel}
         onMenuOpen={() => setOpenDropdown("variant")}
         onMenuClose={() => {
@@ -139,4 +168,4 @@ const CloseDropdown = () => {
   );
 };
 
-export default CloseDropdown;
+export default MakeModel;

@@ -64,22 +64,8 @@
   flex-direction: column;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 100px;
 }
 
-/* @keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-} */
-
-.slide-btn
-{
-    
-}
 
 /* MenusInstant */
 .instant-nav-btn
@@ -127,6 +113,7 @@
     background-color: #fff;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    z-index: 1000;
 }
 
 @media (max-width: 768px)

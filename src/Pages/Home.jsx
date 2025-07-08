@@ -1,7 +1,7 @@
-import HeroSection from "../HeroSection/HeroSection"
 import AsSeenAs from "../Home/AsSeenAs/AsSeenAs"
-import Navbar from "../Navbar/Navbar"
-import Works from "../Works/Works"
+import Works from "../Home/Works/Works"
+import HeroSection from "../Home/HeroSection/HeroSection"
+import Navbar from "../Home/Navbar/Navbar"
 
 const Home = () => {
   return (

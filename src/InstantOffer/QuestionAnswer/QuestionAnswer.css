@@ -67,3 +67,16 @@
     }
 }
 
+.textBox-card
+{
+    padding: 40px 80px 64px;
+}
+
+@media (max-width: 480px)
+{
+   .textBox-card
+    {
+        padding: 20px;
+    }
+}
+

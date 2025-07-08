@@ -1,6 +1,6 @@
 import { IoReload } from "react-icons/io5";
 import "./Main.Instant.css";
-import QuestionAnswer from "./QuestionAnswer/QuestionAnswer";
+import QuestionWithOptions from "./QuestionAnswer/QuestionWithOptions";
 const MainInstant = () => {
   return (
     <section className='main-instant'>
@@ -22,7 +22,7 @@ const MainInstant = () => {
 
             </div>
             <div className="col-lg-7">
-                <QuestionAnswer/>
+                <QuestionWithOptions/>
             </div>
           </div>
         </div>
