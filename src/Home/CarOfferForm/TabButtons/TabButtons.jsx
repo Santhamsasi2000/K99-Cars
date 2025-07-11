@@ -16,7 +16,7 @@ const TabButtons = () => {
          onClick={ ()=> setActiveTab("makeModel")}>MAKE & MODEL</button>
       </div>
       {/* ======= Conditional Rendering the Switching Tab */}
-      <div className="form-content">
+      <div className="form-content h-100">
         {
           activeTab === 'registrationNumber' ? <RegistrationNo/> : <MakeModel/>
         }

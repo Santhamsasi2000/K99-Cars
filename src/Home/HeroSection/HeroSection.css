@@ -16,7 +16,7 @@
 
 .hero-title
 {
-    font-size: clamp(3.5rem,5.128vw + 2.346rem,8.5rem) !important;
+    font-size: clamp(3.5rem,5.128vw + 2.346rem, 7.5rem) !important;
     font-weight: 900;
     font-family: "Bebas Neue", sans-serif;
     text-align: center;
