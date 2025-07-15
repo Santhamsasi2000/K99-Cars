@@ -18,7 +18,7 @@ const Works = () => {
     }, []);
 
   return (
-    <section className="p-3 p-sm-4 p-md-5">
+    <section className="p-3 p-sm-4 p-md-5 mt-4">
         <h2 className="works-title">HOW IT WORKS</h2>
         <p className="text-center fw-semibold fs-5 mb-5">3 simple steps to sell your car anywhere in India — fast and hassle-free.</p>
         <div className="row gy-4 gy-sm-5 justify-content-center">

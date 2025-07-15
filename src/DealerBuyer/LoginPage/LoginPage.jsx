@@ -1,6 +1,7 @@
 import DescriptionLogin from "./DescriptionLogin"
-import FormLogin from "./FormLogin"
+import FormLogin from "./PasswordLogin"
 import NavLogin from "./NavLogin"
+import "./LoginPage.css"
 
 const LoginPage = () => {
   return (

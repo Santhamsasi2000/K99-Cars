@@ -3,12 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import LoginPage from './DealerBuyer/LoginPage/LoginPage.jsx'
+import UploadDocuments from './DealerBuyer/LoginPage/UpdateProfile/UploadDocuments.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
-      <App />
-      {/* <LoginPage/> */}
-    </StrictMode>,
+      {/* <SignUpDealer/> */}
+      {/* <OtpVerify/> */}
+      <UploadDocuments/>
+    </StrictMode>
   </BrowserRouter>
 )

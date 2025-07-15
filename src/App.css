@@ -24,3 +24,10 @@
   background-color: #F5C617;
 }
 
+.form-control:focus 
+{
+  box-shadow: none;
+  outline: none;
+  border-color: black; /* Optional: same as default border */
+}
+

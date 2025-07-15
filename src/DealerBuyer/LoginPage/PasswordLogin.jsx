@@ -4,7 +4,7 @@ import { FaLock, FaUser } from "react-icons/fa"
 import { useFormik } from "formik"
 import * as Yup from "yup";
 
-const FormLogin = () => {
+const PasswordLogin = () => {
     const formik = useFormik({
         initialValues: {
             username: "",
@@ -104,4 +104,4 @@ const FormLogin = () => {
   )
 }
 
-export default FormLogin
+export default PasswordLogin

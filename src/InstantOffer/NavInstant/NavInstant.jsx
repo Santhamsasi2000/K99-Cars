@@ -2,7 +2,7 @@ import "./NavInstant.css";
 import { IoCallOutline, IoReload } from "react-icons/io5";
 import { FaCarSide } from "react-icons/fa";
 import { useState } from "react";
-import { IoMdClose } from "react-icons/io";
+import { IoIosMail, IoMdClose } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdLogin } from "react-icons/md";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -38,7 +38,9 @@ const NavInstant = () => {
                     <hr/>
                   <div className="d-flex align-items-center mb-3">
                     <p className="dropdown-item fs-6">Talk to a human</p>
-                    <p className="mb-0 fs-6">+91-6384379814</p>
+                    <a href="mailto:contact@k99x.com" 
+                    className="mb-0 fs-6 text-decoration-none text-dark d-flex align-items-center">
+                      <IoIosMail className="me-1 fs-5"/>contact@k99x.com</a>
                   </div>
                   <div className="d-flex flex-column align-items-center justify-content-center gap-3">
                     <button className="instant-nav-btn light-btn dropdown-item py-3">Sign in <MdLogin className="fs-4"/></button>
@@ -47,26 +49,29 @@ const NavInstant = () => {
                   </div>
               </div>
             </div>  
-            <h1 className="fw-bold fs-4 mb-0"><NavLink to="/" className="text-white text-decoration-none">K99</NavLink></h1>
+            <h1 className="fw-bold fs-4 mb-0"><NavLink to="/" className="text-white text-decoration-none">K99X</NavLink></h1>
           </div>
           <div className="d-md-flex align-items-center gap-5 d-none">
-            <a className="fw-bold text-white text-decoration-none mt-1" style={{cursor: "pointer"}}>Become a K99 Buyer</a>
-            <a className="d-flex align-items-center text-white text-decoration-none" style={{fontWeight: "900", cursor:"pointer"}}>
-              <span className="mt-1">+91-8556550134</span> 
-              <IoCallOutline className="fs-4 ms-2"/>
+            <a className="fw-bold text-white text-decoration-none mt-1" style={{cursor: "pointer"}}>Become a K99X Buyer</a>
+            <a href="mailto:contact@k99x.com" 
+            className="d-flex align-items-center text-white text-decoration-none" style={{fontWeight: "900", cursor:"pointer"}}>
+              <span>contact@k99x.com</span> 
+              <IoIosMail className="fs-3 ms-2"/>
             </a>
             <button className="sign-in border-0 rounded-pill px-4 py-3 text-white fw-bold">Sign in</button>
           </div>
 
           <div className="d-sm-block d-md-none d-none">
-          <a className="d-flex align-items-center text-white text-decoration-none" style={{fontWeight: "900", cursor:"pointer"}}>
-              <span className="mt-1">+91-6384379814</span> 
-              <IoCallOutline className="fs-4 ms-2"/>
+          <a href="mailto:contact@k99x.com" 
+          className="d-flex align-items-center text-white text-decoration-none"
+           style={{fontWeight: "900", cursor:"pointer"}}>
+              <span>contact@k99x.com</span> 
+              <IoIosMail className="fs-4 ms-2"/>
             </a>
           </div>
 
           <div className="d-sm-none d-flex gap-3 align-items-center ">
-            <button className="sign-in border-0 rounded-circle px-2 py-2 text-white fw-bold"><IoCallOutline className="fs-4"/></button>
+            <button className="sign-in border-0 rounded-circle px-2 py-2 text-white fw-bold"><IoIosMail className="fs-4"/></button>
             <button className="sign-in border-0 rounded-circle px-2 py-2 text-white fw-bold" onClick={()=>setCarmenu(true)}>
               <FaCarSide className="fs-4"/>
             </button>
@@ -104,7 +109,7 @@ const NavInstant = () => {
           </div>
 
           <div className="d-sm-none d-flex gap-3 align-items-center ">
-          <button className="slide-btn border-0 rounded-circle px-2 py-2"><IoCallOutline className="fs-4"/></button>
+          <button className="slide-btn border-0 rounded-circle px-2 py-2"><IoIosMail className="fs-4"/></button>
           <button className="slide-btn border-0 rounded-circle px-2 py-2" onClick={()=>setCarmenu(false)}>
             <IoMdClose className="fs-4"/>
           </button>
@@ -139,18 +144,17 @@ const NavInstant = () => {
                 </button>
                
             </div> 
-            <h1 className="fw-bold fs-4 mb-0">K99</h1>
+            <h1 className="fw-bold fs-4 mb-0">K99X</h1>
           </div>
 
            <div className="d-none d-sm-block d-md-none">
-          <a className="d-flex align-items-center text-dark text-decoration-none" style={{cursor:"pointer"}}>
-              <span className="mt-1">+91-8775865692</span> 
-              <IoCallOutline className="fs-4 ms-2"/>
-            </a>
+            <a href="mailto:contact@k99x.com" 
+               className="mb-0 fs-6 text-decoration-none text-dark d-flex align-items-center">
+              <IoIosMail className="me-1 fs-5"/>contact@k99x.com</a>
           </div>
 
           <div className="d-sm-none d-flex gap-3 align-items-center ">
-          <button className="slide-btn border-0 rounded-circle px-2 py-2"><IoCallOutline className="fs-4"/></button>
+          <button className="slide-btn border-0 rounded-circle px-2 py-2"><IoIosMail className="fs-4"/></button>
           <button className="slide-btn border-0 rounded-circle px-2 py-2" onClick={()=>setCarmenu(false)}>
             <FaCarSide className="fs-4"/>
           </button>
@@ -158,12 +162,14 @@ const NavInstant = () => {
           </div>
           </nav>
 
-          <div className="p-5">
+          <div className="p-4 p-sm-5">
             <a className="text-decoration-none fs-5" style={{ color: "rgba(33,33,33,.5)"}} href="#">Help center</a>
              <hr className="mb-3"/>
             <div className="d-flex align-items-center justify-content-between mb-3">
-              <p className="small" style={{ color: "rgba(33,33,33,.5)"}}>Talk to a human</p>
-              <p className="small">+91-6384379814</p>
+              <p className="small mb-0" style={{ color: "rgba(33,33,33,.5)"}}>Talk to a human</p>
+              <a href="mailto:contact@k99x.com" 
+               className="mb-0 fs-6 text-decoration-none text-dark d-flex align-items-center">
+              <IoIosMail className="me-1 fs-5"/>contact@k99x.com</a>
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center gap-3">
               <button className="instant-nav-btn light-btn dropdown-item py-2 fs-6">Sign in <MdLogin className="fs-4"/></button>
