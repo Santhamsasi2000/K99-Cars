@@ -1,0 +1,66 @@
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    height: var(--navbar-height-desktop);
+    background-color: var(--secondary-color);
+}
+
+.navbar-nav
+{
+  display: inline-flex;
+}
+
+.nav-link
+{
+    border-radius: 3px;
+}
+
+.nav-link:hover
+{
+    font-weight: bold;
+    transition: .5s !important;
+}
+
+/* ================== Hamburger Menu ====================== */
+.navbar-toggler
+{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon 
+{
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='%23112D3F'><path stroke='%23112D3F' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* ================ DropDown ===================== */
+.dropdown-menu
+{
+    border: none;
+    --bs-dropdown-bg: inherit;
+    --bs-dropdown-link-color: inherit;
+    --bs-dropdown-min-width: 0;
+    --bs-dropdown-padding-y: 0;
+}
+
+.dropdown-item
+{
+   border-radius: 3px;
+}
+
+.dropdown-item:hover 
+{
+   --bs-dropdown-link-hover-bg: var(--secondary-color); 
+   font-weight: bold;
+   transition: .5s !important;
+}
+
+.dropdown-item.active
+{
+  background-color: var(--primary-color); 
+  --bs-dropdown-link-active-color: var(--secondary-color) !important;
+}
+

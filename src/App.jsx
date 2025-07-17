@@ -5,24 +5,31 @@ import Home from './Pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import InstantOffer from './Pages/InstantOffer';
 import ScrollToTop from './Components/ScrollToTop';
-import DashboardDealer from './DealerBuyer/DashboardDealer/DashboardDealer';
-import LiveAuctions from './DealerBuyer/LiveAuctions/LiveAuctions';
-import MyAccount from './DealerBuyer/MyAccount/MyAccount';
-import NavDealer from './DealerBuyer/NavDealer/NavDealer';
+import OtpVerify from './K99XBuyer/LoginPage/OtpVerify';
+import UpdateProfile from './K99XBuyer/LoginPage/UpdateProfile/UpdateProfile';
+import UploadDocuments from './K99XBuyer/LoginPage/UpdateProfile/UploadDocuments';
+import NavDealer from './K99XBuyer/NavDealer/NavDealer';
+import SignInDealer from './K99XBuyer/LoginPage/SignIn/SignInDealer';
+import SignUpDealer from './K99XBuyer/LoginPage/SignUp/SignUpDealer';
 
 function App() {
   return (
     <>
       <ScrollToTop/>
-      {/* <NavDealer/> */}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/instant-offer" element={<InstantOffer/>}/>
-        {/* Dealer Module */}
-         {/* <Route path="/" element={<DashboardDealer/>}/> */}
-         {/* <Route path="/dashboard" element={<DashboardDealer/>}/> */}
-         {/* <Route path="/auctions" element={<LiveAuctions/>}/>
-         <Route path="/my-account" element={<MyAccount/>}/> */}
+  {/* ================ Become a K99 Buyer =======================*/}
+        {/* Sign In */}
+        <Route path="/sign-in" element={<SignInDealer/>}/>
+        <Route path="/sign-up" element={<SignUpDealer/>}/>
+        {/* OTP Verification */}
+        <Route path="/otp-verification" element={<OtpVerify/>}/>
+        {/* Update Profile */}
+        <Route path="/update-details" element={<UpdateProfile/>}/>
+        <Route path="/update-documents" element={<UploadDocuments/>}/>
+        {/* Dealer Dashboard */}
+         <Route path='/nav-dashboard/*' element={<NavDealer/>}/>
       </Routes>
     </>
   )

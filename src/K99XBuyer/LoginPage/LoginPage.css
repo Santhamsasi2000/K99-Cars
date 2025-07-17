@@ -1,0 +1,9 @@
+.bold-900
+{
+    font-weight: 900;
+}
+
+.home-link:hover, .home-link:active
+{
+  color: black !important;
+}

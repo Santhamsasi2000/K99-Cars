@@ -20,8 +20,8 @@ const Navbar = () => {
 
         {/* MD size to xxl size */}
         <div className="d-none d-md-flex gap-5 align-items-center">
-          <a className="text-dark text-decoration-none d-flex align-items-center gap-1" 
-          style={{fontWeight: "900", cursor:"pointer"}}>Become a K99X Buyer <FaArrowRight /></a>
+          <NavLink to="/sign-in" className="text-dark text-decoration-none d-flex align-items-center gap-1" 
+          style={{fontWeight: "900", cursor:"pointer"}}>Become a K99X Buyer <FaArrowRight /></NavLink>
           <a href="mailto:contact@k99x.com"  
              className="d-flex align-items-center text-dark text-decoration-none" style={{fontWeight: "900", cursor:"pointer"}}>
             <span>contact@k99x.com</span> 
@@ -32,8 +32,8 @@ const Navbar = () => {
 
         {/* SM Size */}
         <div className="d-none d-sm-flex d-md-none gap-4 align-items-center">
-          <a className="text-dark text-decoration-none d-flex align-items-center gap-1" 
-          style={{fontWeight: "900", cursor:"pointer"}}>Become a K99X Buyer <FaArrowRight /></a>
+          <NavLink to="/sign-in" className="text-dark text-decoration-none d-flex align-items-center gap-1" 
+          style={{fontWeight: "900", cursor:"pointer"}}>Become a K99X Buyer <FaArrowRight /></NavLink>
           <a className="fw-bold text-dark" href="mailto:contact@k99x.com" style={{backgroundColor: "inherit"}}><IoIosMail className="fs-2"/></a>
           <button className="d-flex align-items-center border-0 rounded-pill btn btn-dark px-3 px-md-4 py-2"
            style={{fontWeight: "900"}}>SIGN IN</button>
@@ -46,9 +46,9 @@ const Navbar = () => {
           </button>
           <ul class="dropdown-menu rounded-4 mt-3 ">
             <li>
-              <a className="dropdown-item text-dark 
+              <NavLink to="/sign-in" className="dropdown-item text-dark 
               d-flex align-items-center gap-1 fs-6" 
-             >Become a K99X Buyer <FaArrowRight /></a>
+             >Become a K99X Buyer <FaArrowRight /></NavLink>
             </li>
             <li>
               <a href="mailto:contact@k99x.com"  
