@@ -2,6 +2,7 @@ import DescriptionLogin from "./DescriptionLogin"
 import NavLogin from "../NavLogin"
 import "../LoginPage.css"
 import SignInTabs from "./SignInTabs"
+import FooterBuyer from "../../FooterBuyer"
 
 const SignInDealer = () => {
   return (
@@ -9,6 +10,7 @@ const SignInDealer = () => {
       <NavLogin/>
       <SignInTabs/>
       <DescriptionLogin/>
+      <FooterBuyer/>
     </>
   )
 }

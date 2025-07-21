@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { BsPlusLg } from "react-icons/bs"
 import { FaTimes } from "react-icons/fa";
 
-const FileUploadCard = ({ label, required }) => {
+const FileUploadCard = ({ label, name, required, onChange }) => {
   const fileInputRef = useRef(null);
   const [previewUrl, setPreviewUrl] = useState(null);
 
@@ -15,18 +15,23 @@ const FileUploadCard = ({ label, required }) => {
     if (file && file.type.startsWith("image/"))
     {
        const reader = new FileReader();
-       reader.onloadend = () => setPreviewUrl(reader.result);
+       reader.onloadend = () => {
+        setPreviewUrl(reader.result);
+        onChange && onChange(file); // send file to parent
+       }  
        reader.readAsDataURL(file);
     }
     else
     {
       setPreviewUrl(null);
+      onChange && onChange(null); // clear if invalid
     }
   }
 
   const handleRemove = () => {
     setPreviewUrl(null);
     fileInputRef.current.value = ""; // Clear file input value
+     onChange && onChange(null);
   }
 
   return (

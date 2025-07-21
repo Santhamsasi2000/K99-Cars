@@ -1,12 +1,14 @@
 import { FaCarAlt, FaCaretDown, FaUser } from "react-icons/fa"
 import { NavLink } from "react-router-dom"
 import "./LoginPage.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const NavLogin = () => {
   return (
     <nav className="d-flex justify-content-between align-items-center px-5 py-3 bg-light">
-       <div className="d-flex align-items-center gap-2">
+       <div className="d-flex align-items-center gap-2 text-primary">
          <FaCarAlt className="fs-5"/>
+         {/* <LazyLoadImage className="logo" src="/Images/Logo/k99x-logo.jpg"/> */}
          <h1 className="fs-5 mb-0 fw-bold">K99X</h1>
          <NavLink className="home-link text-secondary mb-0 ms-3 ms-sm-4 text-decoration-none" to="/">Home</NavLink>
        </div>

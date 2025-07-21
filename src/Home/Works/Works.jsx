@@ -73,19 +73,19 @@ export default Works
 const ThreeSteps = [
   {
     id: 1,
-    icon: "/Home/instant-online-quote.png",
+    icon: "Images/Home/instant-online-quote.png",
     title: "NO-HAGGLE, INSTANT ONLINE QUOTE",
     description: "Enter your car details (Maruti, Hyundai, Tata, etc.) and get a best-price quote in seconds — no account needed!",
   },
   {
     id: 2,
-    icon: "/Home/vehicle-inspection-home.png",
+    icon: "Images/Home/vehicle-inspection-home.png",
     title: "FREE DOORSTEP CAR INSPECTION",
     description: "Choose a convenient time. Our expert will inspect your car at your home — 100% free, no pressure.",
   },
   {
     id: 3,
-    icon: "/Home/pick-up-amout-credited.png",
+    icon: "Images/Home/pick-up-amout-credited.png",
     title: "INSTANT PAYMENT, SAME DAY PICKUP",
     description: "Once you accept the offer, get paid instantly via UPI or bank transfer. We’ll handle the paperwork and pick up your car the same day.",
   },

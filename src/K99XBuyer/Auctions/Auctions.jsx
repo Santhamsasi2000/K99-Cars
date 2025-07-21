@@ -11,9 +11,13 @@ const Auctions = () => {
       </header>
       <p className='text-secondary'>Browse and bid on available vehicles</p>
       {/* Choose the Car*/}
-      <FilterAuction/>
+      <div className="pb-5">
+        <FilterAuction/>
+      </div>
       {/* Live Auction */}
-      <LiveAuction/>
+      <div className="pt-5">
+        <LiveAuction/>
+      </div>
     </section>
   )
 }

@@ -1,9 +1,10 @@
 import { FaStar } from "react-icons/fa"
 import { LazyLoadImage } from "react-lazy-load-image-component"
+import { NavLink } from "react-router-dom"
 
 const LiveAuction = () => {
   return (
-    <section className="shadow-sm mt-5 bg-light">
+     <section className="shadow-sm">
      <div className="row gy-5 gx-0">
       <div className="col-xl-8">
         <div className="row gy-4">
@@ -132,12 +133,12 @@ const LiveAuction = () => {
         </div>
         <h6 className="bg-primary bg-opacity-25 p-2 fw-bold fs-5 text-center">Rs.3,60,000</h6>
         <div className="d-flex gap-3 mt-4">
-          <button className="w-100 btn btn-primary fs-5 bold-900">AutoBid</button>
-          <button className="w-100 btn btn-success fs-5 bold-900 ">Bid Now</button>
+          <NavLink className="w-100 btn btn-primary fs-5 bold-900">AutoBid</NavLink>
+          <NavLink to="/bid-now" className="w-100 btn btn-success fs-5 bold-900 ">Bid Now</NavLink>
         </div>
       </div>
      </div>
-    </section>
+     </section>
   )
 }
 

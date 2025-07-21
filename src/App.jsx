@@ -11,6 +11,7 @@ import UploadDocuments from './K99XBuyer/LoginPage/UpdateProfile/UploadDocuments
 import NavDealer from './K99XBuyer/NavDealer/NavDealer';
 import SignInDealer from './K99XBuyer/LoginPage/SignIn/SignInDealer';
 import SignUpDealer from './K99XBuyer/LoginPage/SignUp/SignUpDealer';
+import BidNow from './K99XBuyer/Auctions/BidNow/BidNow';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
         <Route path="/update-documents" element={<UploadDocuments/>}/>
         {/* Dealer Dashboard */}
          <Route path='/nav-dashboard/*' element={<NavDealer/>}/>
+        {/* Auctions - Bid Now */}
+        <Route path='/bid-now' element={<BidNow/>}/>
       </Routes>
     </>
   )

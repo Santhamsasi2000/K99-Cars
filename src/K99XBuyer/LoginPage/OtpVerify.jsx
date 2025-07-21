@@ -1,90 +1,98 @@
 import { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
+import NavLogin from "./NavLogin";
+import FooterBuyer from "../FooterBuyer";
 
 const OtpVerify = () => {
   const [otpInput, setOtpInput] = useState(["", "", "", ""]);
   const [seconds, setSeconds] = useState(30);
   const navigate = useNavigate();
 
-  const mobile = sessionStorage.getItem("mobile");
-  const realOtp = sessionStorage.getItem("otp");
+  const handleResend = () => {
+    setSeconds(30);
+    setOtpInput(["", "", "", ""]);
+  };
 
+  useEffect(() => {
+    if (seconds > 0) {
+      const timer = setTimeout(() => setSeconds((s) => s - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [seconds]);
+
+  // Handle each digit change
   const handleChange = (value, index) => {
-    if (!/^\d?$/.test(value)) return;
+    if (!/^\d?$/.test(value)) return; // only digits
 
     const newOtp = [...otpInput];
     newOtp[index] = value;
     setOtpInput(newOtp);
 
-    // Auto focus next
+    // Move to next input
     if (value && index < 3) {
-      document.getElementById(`otp-${index + 1}`).focus();
+      const next = document.getElementById(`otp-${index + 1}`);
+      if (next) next.focus();
     }
   };
 
-  const handleVerify = () => {
-    const enteredOtp = otpInput.join("");
-    if (enteredOtp === realOtp) {
-      alert("✅ OTP Verified!");
-      sessionStorage.clear();
-      navigate("/");
-    } else {
-      alert("❌ Incorrect OTP");
-    }
-  };
+  const formik = useFormik({
+    initialValues: { otp: "" },
+    onSubmit: () => {
+      const fullOtp = otpInput.join("");
+      if (fullOtp.length < 4 || otpInput.includes("")) {
+        alert("Please enter all 4 digits of the OTP");
+        return;
+      }
 
-  const handleResend = () => {
-    const newOtp = Math.floor(1000 + Math.random() * 9000).toString();
-    sessionStorage.setItem("otp", newOtp);
-    console.log("Resent OTP:", newOtp);
-    setSeconds(30);
-  };
-
-  useEffect(() => {
-    if (seconds > 0) {
-      const timer = setTimeout(() => setSeconds(seconds - 1), 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [seconds]);
+      // You can add API verification here
+      console.log("OTP Entered:", fullOtp);
+      navigate("/update-details"); // replace with your actual path
+    },
+  });
 
   return (
-    <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
-       <h2 className="bold-900 text-center mb-4">OTP Verification</h2>
-      <div className="card p-4">
+    <>
+     <NavLogin/>
+     <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
+      <h2 className="bold-900 text-center mb-4">OTP Verification</h2>
+
+      <form className="card p-4" onSubmit={formik.handleSubmit}>
         <p className="mb-0">OTP sent to 6369499234</p>
-      
+
         <div className="d-flex gap-3 my-4">
-            {otpInput.map((digit, i) => (
+          {otpInput.map((digit, i) => (
             <input
-                key={i}
-                id={`otp-${i}`}
-                type="text"
-                maxLength="1"
-                className="form-control text-center"
-                style={{ width: "50px", fontSize: "24px" }}
-                value={digit}
-                onChange={(e) => handleChange(e.target.value, i)}
+              key={i}
+              id={`otp-${i}`}
+              type="text"
+              maxLength="1"
+              className="form-control text-center"
+              style={{ width: "50px", fontSize: "24px" }}
+              value={digit}
+              onChange={(e) => handleChange(e.target.value, i)}
             />
-            ))}
+          ))}
         </div>
 
-        <NavLink to="/update-details" className="btn btn-primary mb-3" onClick={handleVerify}>
-            Verify OTP
-        </NavLink>
+        <button type="submit" className="btn btn-primary mb-3">
+          Verify OTP
+        </button>
 
         <div>
-            {seconds > 0 ? (
+          {seconds > 0 ? (
             <span>Resend OTP in {seconds}s</span>
-            ) : (
-            <button className="btn btn-link" onClick={handleResend}>
-                Resend OTP
+          ) : (
+            <button className="btn btn-link p-0" onClick={handleResend}>
+              Resend OTP
             </button>
-            )}
+          )}
         </div>
-      </div>
-    </section>
+      </form>
+     </section>
+     <FooterBuyer/>
+    </>
   );
 };
 
 export default OtpVerify;
-

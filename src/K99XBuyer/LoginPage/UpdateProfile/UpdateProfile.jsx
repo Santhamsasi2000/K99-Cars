@@ -4,6 +4,8 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordInput from "./PasswordInput";
+import NavLogin from "../NavLogin";
+import FooterBuyer from "../../FooterBuyer";
 
 const UpdateProfile = () => {
   const navigate = useNavigate();
@@ -51,6 +53,8 @@ const UpdateProfile = () => {
   });
 
   return (
+    <>
+    <NavLogin/>
     <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
       <div className="p-4 mb-4 bg-light d-flex justify-content-between align-items-center w-100">
         <p className="fw-bold mb-0 text-center">Please update your profile</p>
@@ -199,6 +203,8 @@ const UpdateProfile = () => {
         </button>
       </form>
     </section>
+    <FooterBuyer/>
+    </>
   );
 };
 

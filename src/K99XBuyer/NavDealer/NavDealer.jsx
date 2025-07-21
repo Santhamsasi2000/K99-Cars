@@ -6,6 +6,7 @@ import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import DashboardDealer from "../DashboardDealer/DashboardDealer";
 import LiveAuctions from "../Auctions/Auctions";
 import MyAccount from "../MyAccount/MyAccount";
+import FooterBuyer from "../FooterBuyer";
 
 const NavDealer = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -87,6 +88,7 @@ const NavDealer = () => {
         </div>
       </div>
    </nav>
+   
    {/* Routes */}
    <Routes>
       {/* ✅ default route ⇒ /nav-dashboard */}
@@ -97,6 +99,9 @@ const NavDealer = () => {
       {/* Optional 404 inside dashboard */} 
       <Route path="*" element={<h1 className="p-4">Page not found.</h1>} />
    </Routes>
+
+   {/* Footer */}
+   <FooterBuyer/>
   </>
   );
 };
