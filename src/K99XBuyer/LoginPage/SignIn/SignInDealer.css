@@ -1,0 +1,23 @@
+/* Sign In tabs */
+
+.activeTab-btn
+{
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.normalTab-btn
+{
+    border: 1px solid  var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.activeTab-btn:hover,
+.normalTab-btn:hover 
+{
+  transform: scale(1.03);
+}

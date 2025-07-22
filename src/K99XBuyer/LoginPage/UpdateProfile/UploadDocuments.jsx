@@ -3,7 +3,7 @@ import FileUploadCard from "./FileUploadCard"
 import { NavLink, useNavigate } from "react-router-dom"
 import { useFormik } from "formik";
 import NavLogin from "../NavLogin";
-import FooterBuyer from "../../FooterBuyer";
+import FooterBuyer from "../../FooterBuyer/FooterBuyer";
 
 const UploadDocuments = () => {
   const navigate = useNavigate();

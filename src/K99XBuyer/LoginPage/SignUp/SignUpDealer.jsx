@@ -1,4 +1,4 @@
-import FooterBuyer from "../../FooterBuyer"
+import FooterBuyer from "../../FooterBuyer/FooterBuyer"
 import NavLogin from "../NavLogin"
 import SignUpForm from "./SignUpForm"
 

@@ -6,7 +6,7 @@ import AuctionStatus from "./AuctionStatus"
 import QuickAuctionsBid from "./QuickAuctionsBid"
 import LiveBidHistory from "./LiveBidHistory"
 import NavLogin from "../../LoginPage/NavLogin"
-import FooterBuyer from "../../FooterBuyer"
+import FooterBuyer from "../../FooterBuyer/FooterBuyer"
 
 const BidNow = () => {
   return (

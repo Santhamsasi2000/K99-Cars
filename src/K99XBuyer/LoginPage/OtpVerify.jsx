@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import NavLogin from "./NavLogin";
-import FooterBuyer from "../FooterBuyer";
+import FooterBuyer from "../FooterBuyer/FooterBuyer";
 
 const OtpVerify = () => {
   const [otpInput, setOtpInput] = useState(["", "", "", ""]);

@@ -6,7 +6,7 @@ import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import DashboardDealer from "../DashboardDealer/DashboardDealer";
 import LiveAuctions from "../Auctions/Auctions";
 import MyAccount from "../MyAccount/MyAccount";
-import FooterBuyer from "../FooterBuyer";
+import FooterBuyer from "../FooterBuyer/FooterBuyer";
 
 const NavDealer = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const NavDealer = () => {
 
   return (
   <>
-   <nav className="navbar navbar-expand-md bg-light p-3 p-sm-4">
+   <nav className="navbar navbar-expand-md  p-3 p-sm-4">
       <div className="container-fluid p-0">
         {/* Brand */}
         <NavLink to="/" className="d-flex align-items-center gap-2 text-decoration-none">

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordInput from "./PasswordInput";
 import NavLogin from "../NavLogin";
-import FooterBuyer from "../../FooterBuyer";
+import FooterBuyer from "../../FooterBuyer/FooterBuyer";
 
 const UpdateProfile = () => {
   const navigate = useNavigate();
