@@ -49,12 +49,12 @@
 
 .tab-btn:hover
 {
-    color: var(--heading-text);
+    color: #212121;
 }
 
 .tab-btn.active
 {
-    background-color: var(--heading-text);
+    background-color: #212121;
     color: white;
 }
 

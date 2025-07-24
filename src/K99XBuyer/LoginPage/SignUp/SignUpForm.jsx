@@ -1,9 +1,13 @@
 import { useFormik } from "formik"
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const SignUpForm = () => {
-  const navigate = useNavigate(); // for redirecting after validation
+  const navigate = useNavigate();
+  const formRef = useRef(null);
+  const controls = useAnimation();
 
   // ✅ Validation Schema using Yup
   const validationSchema = Yup.object({
@@ -35,18 +39,45 @@ const SignUpForm = () => {
       },
     });
 
+    // Scroll to form on mount
+    useEffect(() => {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      controls.start("visible");
+      }, [controls]);
+
+    // Animation Variant
+   const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-     <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
-       <h2 className="bold-900 text-center mb-4">Become a dealer</h2>
-       <div className="card p-4">
-         <h5 className="fw-bold">Create Your Account</h5>
-         <p className="text-secondary">Fill in the details below to get started.</p>
+     <motion.section 
+      className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100"
+      initial="hidden"
+      animate={controls}
+      variants={fadeInUp}>
+       <motion.h2 className="primary-title mb-4"
+         initial={{ opacity: 0, y: -20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut"}}>Become a dealer</motion.h2>
+       <motion.div className="card-bg p-3 p-sm-5 rounded-3 shadow"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+       >
+         <h5 className="primary-second-title">Create Your Account</h5>
+         <p>Fill in the details below to get started.</p>
          <form onSubmit={formik.handleSubmit}>
           {/* First and Last names */}
           <div className="row mb-4 gy-4">
             <div className="col-sm-6">
-              <label htmlFor="firstName" className="form-label fw-bold">First Name</label>
-              <input
+              <label htmlFor="firstName" className="form-label fw-bold">First Name<span className="ms-2 secondary-color">*</span></label>
+              <motion.input
                 type="text"
                 className="form-control"
                 id="firstName"
@@ -55,14 +86,16 @@ const SignUpForm = () => {
                 value={formik.values.firstName}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                whileFocus={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
               />
               {formik.touched.firstName && formik.errors.firstName && (
                 <small className="text-danger fw-semibold">{formik.errors.firstName}</small>
               )}
             </div>
             <div className="col-sm-6">
-              <label htmlFor="lastName" className="form-label fw-bold">Last Name</label>
-              <input
+              <label htmlFor="lastName" className="form-label fw-bold">Last Name<span className="ms-2 secondary-color">*</span></label>
+              <motion.input
                 type="text"
                 className="form-control"
                 id="lastName"
@@ -71,6 +104,8 @@ const SignUpForm = () => {
                 value={formik.values.lastName}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                whileFocus={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
               />
               {formik.touched.lastName && formik.errors.lastName && (
                 <small className="text-danger fw-semibold">{formik.errors.lastName}</small>
@@ -79,8 +114,8 @@ const SignUpForm = () => {
           </div>
           {/* pan card */}
           <div className="mb-4">
-            <label htmlFor="panCard" className="form-label fw-bold">Pan Card</label>
-            <input
+            <label htmlFor="panCard" className="form-label fw-bold">Pan Card<span className="ms-2 secondary-color">*</span></label>
+            <motion.input
               type="text"
               className="form-control"
               id="panCard"
@@ -89,6 +124,8 @@ const SignUpForm = () => {
               value={formik.values.panCard}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              whileFocus={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
             />
             {formik.touched.panCard && formik.errors.panCard && (
               <small className="text-danger fw-semibold">{formik.errors.panCard}</small>
@@ -97,7 +134,7 @@ const SignUpForm = () => {
           {/* State and Mobile Number */}
           <div className="row mb-4 gy-4">
             <div className="col-sm-6">
-              <label htmlFor="state" className="form-label fw-bold">State</label>
+              <label htmlFor="state" className="form-label fw-bold">State<span className="ms-2 secondary-color">*</span></label>
               <select
                 className="form-select"
                 id="state"
@@ -116,8 +153,9 @@ const SignUpForm = () => {
               )}
             </div>
             <div className="col-sm-6">
-              <label htmlFor="mobileNo" className="form-label fw-bold">Mobile Number</label>
-              <input
+              <label htmlFor="mobileNo" className="form-label fw-bold">
+                Mobile Number<span className="ms-2 secondary-color">*</span></label>
+              <motion.input
                 type="tel"
                 className="form-control"
                 id="mobileNo"
@@ -126,6 +164,8 @@ const SignUpForm = () => {
                 value={formik.values.mobileNo}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                whileFocus={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
               />
               {formik.touched.mobileNo && formik.errors.mobileNo && (
                 <small className="text-danger fw-semibold">{formik.errors.mobileNo}</small>
@@ -143,7 +183,7 @@ const SignUpForm = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            <label className="form-check-label fw-bold text-secondary text-decoration-underline" htmlFor="acceptTerms">
+            <label className="form-check-label fw-bold text-decoration-underline" htmlFor="acceptTerms">
               I accept the Terms and Conditions
             </label>
             {formik.touched.acceptTerms && formik.errors.acceptTerms && (
@@ -151,11 +191,18 @@ const SignUpForm = () => {
             )}
            </div>
            {/* Send OTP - btn*/}
-           <button type="submit" className="btn btn-primary d-block w-100 mb-4">Send OTP</button>
+           <motion.button 
+           type="submit" 
+           className="primary-btn px-4 py-2"
+           whileHover={{ scale: 1.05 }}
+           whileTap={{ scale: 0.95 }}
+           transition={{ duration: 0.2 }}>
+            Send OTP
+           </motion.button>
          </form>
 
-       </div>
-    </section>
+       </motion.div>
+    </motion.section>
   )
 }
 

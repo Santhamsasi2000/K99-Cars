@@ -12,6 +12,7 @@
     font-family: "Nunito Sans", sans-serif;
 }
 
+/* ========== Primary Color =============*/
 .primary-title
 {
   font-family: "Inter", sans-serif;
@@ -28,31 +29,9 @@
   font-size: 20px;
 }
 
-.common-btn
+.primary-title-color
 {
-   background-color: #ffd94f;
-   border-radius: 50rem;
-   border: none;
-   font-weight: 900;
-   font-size: 22px;
-   font-family: "Bebas Neue", sans-serif;
-}
-
-.common-btn:hover
-{
-  background-color: #F5C617;
-}
-
-.form-control:focus 
-{
-  box-shadow: none;
-  outline: none;
-  border-color: var(--secondary-border); /* Optional: same as default border */
-}
-
-.navbar-bg
-{
-  background-color: var(--primary-color);
+  color: var(--primary-title);
 }
 
 .primary-color
@@ -60,14 +39,40 @@
   color: var(--primary-color);
 }
 
+.card-bg
+{
+  background-color: var(--card-bg);
+}
+
+.navbar-bg
+{
+  background-color: var(--primary-color);
+}
+
+.primary-border
+{
+  border: 1px solid var(--primary-title);
+}
+
+.primary-color-100
+{
+  background-color: var(--primary-color-100);
+}
+
+/* Secondary Color */
 .secondary-color
 {
   color: var(--secondary-color);
 }
 
-.card-bg
+.secondary-bg
 {
-  background-color: var(--card-bg);
+  background-color: var(--secondary-color);
+}
+
+.secondary-border
+{
+  border: 1px solid var(--secondary-color);
 }
 
 .card-bg-secondary
@@ -75,7 +80,22 @@
   background-color: var(--card-bg-secondary);
 }
 
+.secondary-color-100
+{
+  background-color: var(--secondary-color-100);
+}
 
+.secondary-outline-btn
+{
+  background-color: var(--card-bg);
+  border-radius: 50rem;
+  color: var(--secondary-color);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+
+/* Button */
 .primary-btn
 {
   background-color: #16a34a;
@@ -96,11 +116,33 @@
   border-radius: 50rem;
 }
 
-.title-primary
+
+
+.common-btn
 {
-  color: var(--primary-title);
+   background-color: #ffd94f;
+   border-radius: 50rem;
+   border: none;
+   font-weight: 900;
+   font-size: 22px;
+   font-family: "Bebas Neue", sans-serif;
 }
 
+.common-btn:hover
+{
+  background-color: #F5C617;
+}
+
+/* Form */
+.form-control:focus 
+{
+  box-shadow: none;
+  outline: none;
+  border-color: var(--secondary-color); /* Optional: same as default border */
+}
+
+
+/* Others Common */
 .cursor-pointer
 {
   cursor: pointer;

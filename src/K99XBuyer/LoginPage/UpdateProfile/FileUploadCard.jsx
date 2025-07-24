@@ -35,14 +35,14 @@ const FileUploadCard = ({ label, name, required, onChange }) => {
   }
 
   return (
-    <section className="border border-2 rounded-2 p-4">
+    <section className="card-bg-secondary shadow-sm rounded-2 p-4">
        <p className="fw-bold text-center">{label} 
-        {required && <span className="ms-1 text-danger">*</span>}</p>
+        {required && <span className="ms-2 text-danger">*</span>}</p>
 
         {/* Upload Box */}
-       <div className="p-4 pe-auto text-secondary position-relative
-       d-flex flex-column align-items-center rounded-2 border-3 border-secondary"
-           style={{borderStyle: "dotted", cursor:"pointer"}} onClick={handleDivClick}>
+       <div className="p-4 pe-auto secondary-color position-relative
+       d-flex flex-column align-items-center rounded-2"
+           style={{ cursor:"pointer" }} onClick={handleDivClick}>
            {
             previewUrl ? (
               <>
@@ -63,7 +63,7 @@ const FileUploadCard = ({ label, name, required, onChange }) => {
             ):
              <>
               <BsPlusLg className="fs-1 mb-2" />
-              <p className="fw-bold mb-0">Upload Image</p>
+              <p className="fw-bold mb-0 text-secondary">Upload Image</p>
              </>
            }
        </div>

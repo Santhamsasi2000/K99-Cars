@@ -4,14 +4,14 @@ const StatsCard = () => {
   return (
     <section className="row mt-4 mt-sm-5 gy-4">
       {
-        DataStatsCard.map(({ id, borderColor, icon: Icon, iconColor, value, label}) => (
-        <div className="col-sm-6 col-md-3" key={id}>
-            <div className={`p-3 card d-flex flex-column align-items-center border-2 ${borderColor}`}>
-                <Icon className={`fs-3 mb-3 ${iconColor}`}/>
-                <h5 className="fw-bold fs-5">{value}</h5>
-                <p className="text-secondary">{label}</p>
-            </div>
-        </div>
+        DataStatsCard.map(({ id, bgColor, icon: Icon, iconColor, value, label}) => (
+         <div className="col-sm-6 col-md-3" key={id}>
+          <div className={`p-3 rounded-3 shadow d-flex flex-column align-items-center ${bgColor}`}>
+              <Icon className={`fs-3 mb-3 ${iconColor}`}/>
+              <h5 className={`bold-900 fs-5 ${iconColor}`}>{value}</h5>
+              <p className="text-secondary">{label}</p>
+          </div>
+         </div>
         ))
       }
     </section>
@@ -23,33 +23,33 @@ export default StatsCard
 const DataStatsCard = [
   {
     "id": 1,
-    "borderColor": "border-primary",
+    "bgColor": "primary-color-100 primary-border",
     "icon": FaGavel,
-    "iconColor": "text-primary",
+    "iconColor": "primary-title-color",
     "value": "23",
     "label": "Active Auctions"
   },
   {
     "id": 2,
-    "borderColor": "border-success",
+    "bgColor": "secondary-color-100 secondary-border",
     "icon": FaHandHoldingUsd, 
-    "iconColor": "text-success",
+    "iconColor": "secondary-color",
     "value": "12",
     "label": "My Bids"
   },
   {
     "id": 3,
-    "borderColor": "border-warning",
+    "bgColor": "primary-color-100 primary-border",
     "icon": FaTrophy, 
-    "iconColor": "text-warning",
+    "iconColor": "primary-title-color",
     "value": "5",
     "label": "Won Auctions"
   },
   {
     "id": 4,
-    "borderColor": "border-info",
+    "bgColor": "secondary-color-100 secondary-border",
     "icon": FaWallet,
-    "iconColor": "text-info",
+    "iconColor": "secondary-color",
     "value": "$25000",
     "label": "Wallet Balance"
   }

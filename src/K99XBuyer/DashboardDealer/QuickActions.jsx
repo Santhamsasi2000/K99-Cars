@@ -11,35 +11,42 @@ const QuickActions = () => {
 
   return (
     <>
-    <section className="border my-5 rounded-2 border-2">
-      <div className="bg-light">
-        <p className="fw-bold mb-0 py-2 px-3"><HiLightningBolt className="fs-5 me-1"/>Quick Actions</p>
-        <div className="border-top border-2 "></div>
-      </div>
-      <div className="row p-3 gy-4">
-        <div className="col-sm-6 col-md-3">
-          <NavLink to="/nav-dashboard/auctions" className="d-block w-100 btn btn-outline-primary d-flex justify-content-center align-items-center gap-2">
-            <FaSearch/>
-            Browse Auctions
-          </NavLink>
-        </div>
-        <div className="col-sm-6 col-md-3">
-          <button onClick={()=> setShowWatchlist(true)} className="d-block w-100 btn btn-outline-success d-flex justify-content-center align-items-center gap-2">
-              <FaEye />
-            My Watchlist
-          </button>
-        </div>
-        <div className="col-sm-6 col-md-3">
-          <NavLink to="/nav-dashboard/my-account"className="d-block w-100 btn btn-outline-info d-flex justify-content-center align-items-center gap-2">
-            <FaPlus />
-            Add Funds
-          </NavLink>
-        </div>
-        <div className="col-sm-6 col-md-3">
-          <button onClick={()=> setShowReports(true)} className="d-block w-100 btn btn-outline-secondary d-flex justify-content-center align-items-center gap-2">
-            <FaChartBar />
-            Reports
-          </button>
+    <section className="my-5 rounded-2 shadow overflow-hidden">
+      <p className="navbar-bg secondary-color fw-bold mb-0 py-2 px-3 fs-5">
+        <HiLightningBolt className="fs-4 me-1"/>
+        Quick Actions
+      </p>
+      <div className="card-bg p-3">
+        <div className="row gy-4">
+          <div className="col-sm-6 col-md-3">
+            <NavLink to="/nav-dashboard/auctions" 
+            className="w-100 d-flex justify-content-center 
+            align-items-center gap-2 secondary-outline-btn">
+              <FaSearch/>
+              Browse Auctions
+            </NavLink>
+          </div>
+          <div className="col-sm-6 col-md-3">
+            <button onClick={()=> setShowWatchlist(true)}
+             className="w-100 secondary-outline-btn d-flex justify-content-center align-items-center gap-2">
+                <FaEye />
+              My Watchlist
+            </button>
+          </div>
+          <div className="col-sm-6 col-md-3">
+            <NavLink to="/nav-dashboard/my-account" 
+            className="w-100 secondary-outline-btn d-flex 
+            justify-content-center align-items-center gap-2 py-2">
+              <FaPlus />
+              Add Funds
+            </NavLink>
+          </div>
+          <div className="col-sm-6 col-md-3">
+            <button onClick={()=> setShowReports(true)} className="secondary-outline-btn w-100 d-flex justify-content-center align-items-center gap-2">
+              <FaChartBar />
+              Reports
+            </button>
+          </div>
         </div>
       </div>
     </section>

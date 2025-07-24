@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordInput from "./PasswordInput";
 import NavLogin from "../NavLogin";
 import FooterBuyer from "../../FooterBuyer/FooterBuyer";
+import { motion } from "framer-motion";
 
 const UpdateProfile = () => {
   const navigate = useNavigate();
@@ -56,18 +57,21 @@ const UpdateProfile = () => {
     <>
     <NavLogin/>
     <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
-      <div className="p-4 mb-4 bg-light d-flex justify-content-between align-items-center w-100">
-        <p className="fw-bold mb-0 text-center">Please update your profile</p>
-        <FaUserCircle className="text-secondary fs-4" />
-      </div>
+      {/* title */}
+       <motion.h2 className="primary-title mb-4 mb-lg-5"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+       >
+        Update Your Profile</motion.h2>
       {/* Form - Update Profile */}
-      <form className="p-4 shadow rounded-2 w-100" onSubmit={formik.handleSubmit}>
-        <h5 className="fw-bold">Basic Details</h5>
+      <form className="p-4 shadow rounded-3 card-bg w-100" onSubmit={formik.handleSubmit}>
+        <h5 className="primary-second-title mb-1">Basic Details</h5>
         <p className="text-secondary">Please update your basic details.</p>
 
         <div className="row mb-4 gy-4">
           <div className="col-sm-6">
-            <label className="form-label fw-bold">First Name <span className="ms-1 text-danger">*</span></label>
+            <label className="form-label fw-bold">First Name <span className="ms-1 secondary-color">*</span></label>
             <input
               type="text"
               className="form-control"
@@ -78,7 +82,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Last Name <span className="ms-1 text-danger">*</span></label>
+            <label className="form-label fw-bold">Last Name <span className="ms-1 secondary-color">*</span></label>
             <input
               type="text"
               className="form-control"
@@ -103,7 +107,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Mobile Number <span className="ms-1 text-danger">*</span></label>
+            <label className="form-label fw-bold">Mobile Number <span className="ms-1 secondary-color">*</span></label>
             <input
               type="tel"
               className="form-control"
@@ -116,7 +120,7 @@ const UpdateProfile = () => {
         </div>
 
         <div className="col-sm-6 mb-4">
-          <label className="form-label fw-bold">State <span className="ms-1 text-danger">*</span></label>
+          <label className="form-label fw-bold">State <span className="ms-1 secondary-color">*</span></label>
           <select
             className="form-select"
             {...formik.getFieldProps("state")}
@@ -130,10 +134,9 @@ const UpdateProfile = () => {
             <div className="text-danger">{formik.errors.state}</div>
           )}
         </div>
-
-        <hr />
-
-        <h5 className="fw-bold">Your ID Proof</h5>
+        
+        {/* ID Proof */}
+        <h5 className="primary-second-title mb-1">Your ID Proof</h5>
         <p className="text-secondary">Please enter your ID Proof details.</p>
 
         <div className="row mb-4 gy-4">
@@ -149,7 +152,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Pan Card <span className="ms-1 text-danger">*</span></label>
+            <label className="form-label fw-bold">Pan Card <span className="ms-1 secondary-color">*</span></label>
             <input
               type="text"
               className="form-control"
@@ -161,23 +164,20 @@ const UpdateProfile = () => {
           </div>
         </div>
 
-        <hr/>
-
-        <h5 className="fw-bold">Set Your Password</h5>
-        <p className="text-secondary">
-          Required to login to your account.
-        </p>
+        {/* Password */}
+        <h5 className="primary-second-title mb-1">Set Your Password</h5>
+        <p className="text-secondary">Required to login to your account.</p>
 
         <div className="row mb-4 gy-4">
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Password <span className="ms-1 text-danger">*</span></label>
+            <label className="form-label fw-bold">Password <span className="ms-1 secondary-color">*</span></label>
             <PasswordInput
              placeholder="Enter Your Password"
              name="password"
              value={formik.values.password}
              onChange={formik.handleChange}
              onBlur={formik.handleBlur}/>
-            <small className="text-primary">
+            <small className="secondary-color">
               At least 6 chars, A-Z, a-z, 0-9, symbol
             </small>
             {formik.touched.password && formik.errors.password && (
@@ -185,7 +185,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Confirm Password <span className="ms-1 text-danger">*</span></label>
+            <label className="form-label fw-bold">Confirm Password <span className="ms-1 secondary-color">*</span></label>
             <PasswordInput
              placeholder="Enter Confirm Password"
              name="confirmPassword"
@@ -198,9 +198,15 @@ const UpdateProfile = () => {
           </div>
         </div>
 
-        <button type="submit" className="px-5 btn btn-primary text-center fw-bold">
+        <motion.button 
+          type="submit" 
+          className="px-5 py-2 primary-btn" 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+        >
           Next
-        </button>
+        </motion.button>
       </form>
     </section>
     <FooterBuyer/>

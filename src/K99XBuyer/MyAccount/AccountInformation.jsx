@@ -3,16 +3,14 @@ import { IoMdSave } from 'react-icons/io'
 
 const AccountInformation = () => {
   return (
-     <div className="card overflow-hidden">
-        <div className="bg-light">
-            <p className="fw-bold mb-0 d-flex align-items-center gap-2 fs-5 py-2 px-3">
-                <FaUser className="fs-5"/>
-                <span>Account Information</span>
-            </p>
-        </div>
-        <div className="border-top border-2 "></div>
+     <section className='mb-5'>
+       {/* Title */}
+        <h5 className="primary-second-title mb-3 d-flex align-items-center gap-2 py-2 px-3">
+            <FaUser className="fs-5"/>
+            <span>Account Information</span>
+        </h5>
         {/* Profile Update - Form */}
-        <form className="p-3">
+        <form className="p-4 card-bg rounded-3 shadow">
             {/*Name Row  */}
             <div className='row'>
             <div className='col-sm-6'>
@@ -54,9 +52,9 @@ const AccountInformation = () => {
             <input type="text" className="form-control" id="licenseNo" placeholder='Enter Your License Number'/>
             </div>
             {/* Update profile - Button */}
-            <button className='btn btn-primary d-flex align-items-center gap-1'><IoMdSave className='fs-5'/>Update Profile</button>
+            <button className='primary-btn px-4 py-2 d-flex align-items-center gap-1'><IoMdSave className='fs-5'/>Update Profile</button>
         </form>
-     </div>
+     </section>
   )
 }
 

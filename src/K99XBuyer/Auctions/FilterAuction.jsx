@@ -4,15 +4,12 @@ import { MdOutlineClear } from "react-icons/md"
 
 const FilterAuction = () => {
   return (
-    <section className="card overflow-hidden">
-        <div className="bg-light">
-            <p className="fw-bold mb-0 d-flex align-items-center gap-2 fs-5 py-2 px-3">
-                <FaFilter className="fs-5"/>
-                <span>Filters</span>
-            </p>
-        </div>
-        <div className="border-top border-2"></div>
-        <div className="p-3">
+    <section className="shadow rounded-2 overflow-hidden">
+        <p className="navbar-bg secondary-color fs-5 fw-bold mb-0 d-flex align-items-center gap-2 py-2 px-3">
+            <FaFilter className="fs-4"/>
+            <span>Filters</span>
+        </p>
+        <div className="p-3 card-bg">
             <div className="row gy-4 mb-4">
                 {/* State */}
                 <div className="col-sm-6 col-lg-3">
@@ -66,9 +63,9 @@ const FilterAuction = () => {
                     <input type="text" class="form-control" placeholder="Max Price"/>
                 </div>
                 {/* Buttons - Filter and Clear*/}
-                <div className="col-sm-6 col-lg-4">
-                    <button className="btn btn-primary d-inline-flex align-items-center gap-1 me-3"><IoSearch />Apply Filters</button>
-                    <button className="btn btn-outline-secondary d-inline-flex align-items-center gap-1"><MdOutlineClear />Clear</button>
+                <div className="col-lg-6">
+                    <button className="primary-btn py-2 px-4 px-sm-5 d-inline-flex align-items-center gap-1 me-3"><IoSearch />Apply Filters</button>
+                    <button className="secondary-outline-btn  py-2 px-4 px-sm-5 d-inline-flex align-items-center gap-1"><MdOutlineClear />Clear</button>
                 </div>
             </div>
         </div>

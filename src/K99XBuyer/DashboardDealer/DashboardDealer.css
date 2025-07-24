@@ -24,3 +24,14 @@
   border-radius: 8px;
   overflow: hidden;
 }
+
+/* StatsCard.css */
+.secondary-outline-btn
+{
+  background-color: var(--card-bg-secondary);
+  text-decoration: none;
+  padding: 5px 0;
+  border-radius: 50rem;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}

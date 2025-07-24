@@ -18,7 +18,7 @@ const TabButtons = () => {
       {/* ======= Conditional Rendering the Switching Tab */}
       <div className="form-content h-100">
         {
-          activeTab === 'registrationNumber' ? <RegistrationNo/> : <MakeModel/>
+         activeTab === 'registrationNumber' ? <RegistrationNo/> : <MakeModel/>
         }
       </div>
      {/* <NavLink className="mt-4 offer-btn d-block py-4" to="/instant-offer">GET AN INSTANT OFFER

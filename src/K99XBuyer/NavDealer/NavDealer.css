@@ -15,6 +15,7 @@
 .nav-link
 {
     border-radius: 3px;
+    color: black !important;
 }
 
 .nav-link:hover

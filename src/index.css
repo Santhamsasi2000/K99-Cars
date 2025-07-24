@@ -5,11 +5,12 @@
    --primary-color: #86efac;
    --primary-title: #166534;
    --card-bg: #f0fdf4;
+   --primary-color-100: #dcfce7;
 
    /* Secondary Color */
    --secondary-color: #1E3A8A;
-   --secondary-border: #3b6bf6;
    --card-bg-secondary: #eff3ff;
+   --secondary-color-100: #dbe4fe;
    
    
 }

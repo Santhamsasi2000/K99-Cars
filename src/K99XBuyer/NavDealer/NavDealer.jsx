@@ -29,12 +29,12 @@ const NavDealer = () => {
 
   return (
   <>
-   <nav className="navbar navbar-expand-md  p-3 p-sm-4">
+   <nav className="navbar navbar-expand-md  p-3 p-sm-4 navbar-bg">
       <div className="container-fluid p-0">
         {/* Brand */}
-        <NavLink to="/" className="d-flex align-items-center gap-2 text-decoration-none">
-          <FaCarAlt className="fs-5" />
-          <h1 className="fs-5 mb-0 fw-bold">K99X</h1>
+        <NavLink to="/" className="secondary-color d-flex align-items-center gap-2 text-decoration-none">
+          <FaCarAlt className="fs-4" />
+          <h1 className="fs-4 mb-0 bold-900">K99X</h1>
         </NavLink>
 
         {/* Toggle Button */}

@@ -24,7 +24,7 @@ const PasswordInput = ({ placeholder, name, value, onChange, onBlur }) => {
         style={{ cursor: "pointer" }}
         onClick={togglePassword}
       >
-        {showPassword ? <FaEyeSlash /> : <FaEye />}
+        {showPassword ? <FaEyeSlash className="secondary-color"/> : <FaEye className="secondary-color"/>}
       </span>
     </div>
   );

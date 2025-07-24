@@ -2,3 +2,10 @@
 {
     font-weight: 900;
 }
+
+/* Account Status */
+
+.auction-border
+{
+    border: 1px solid var(--secondary-color);
+}
