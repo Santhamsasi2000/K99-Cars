@@ -6,7 +6,7 @@ import "./LoginPage.css";
 const MotionLink = motion(NavLink);
 const NavLogin = () => {
   return (
-    <motion.nav className="navbar-bg d-flex justify-content-between align-items-center px-4 px-sm-5 py-3"
+    <motion.nav className="blue-bg-50 d-flex justify-content-between align-items-center px-4 px-sm-5 py-3"
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -16,15 +16,16 @@ const NavLogin = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.3 }}>
-        <motion.div
+          {/* Logo */}
+        {/* <motion.div
          className="cursor-pointer"
          whileHover={{ scale: 1.1 }}
          transition={{ type: "spring", stiffness: 300 }}>
           <FaCarAlt className="fs-4"/>
-        </motion.div>
+        </motion.div> */}
          {/* <LazyLoadImage className="logo" src="/Images/Logo/k99x-logo.jpg"/> */}
          <motion.h1 
-          className="fs-4 bold-900 mb-0 cursor-pointer"
+          className="fs-4 bold-900 mb-0 cursor-pointer green-color"
           whileHover={{ scale: 1.05 }}>
           K99X
          </motion.h1>

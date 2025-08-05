@@ -1,0 +1,63 @@
+.hero-section
+{
+    padding-left: clamp(16px, 5vw + 2px, 76px);
+    padding-right: clamp(16px, 5vw + 2px, 76px);
+    padding-top: 40px;
+    background-color: var(--card-bg);
+}
+
+@media (max-width: 576px)
+{
+    .hero-section
+    {
+        padding-top: 16px;
+    }
+}
+
+.hero-title
+{
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 370px)
+{
+    .ratings-text
+    {
+        font-size: 13px !important;
+    }
+}
+
+.hero-subtitle
+{
+    font-size: clamp(16px, 1.25vw + 1px, 24px);
+
+}
+
+.size-star
+{
+    font-size: 22px;
+}
+
+@media (max-width: 992px)
+{
+    .size-star
+    {
+        font-size: 16px;
+    }
+}
+
+.rating-text
+{
+    font-size: 18px;
+}
+
+@media (max-width: 992px)
+{
+    .rating-text
+    {
+        font-size: 14px;
+    }
+}

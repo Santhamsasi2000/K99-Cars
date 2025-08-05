@@ -8,9 +8,8 @@ const SignInDealer = () => {
   return (
     <>
       <NavLogin/>
-      <div className="p-3 p-sm-4 p-md-5">
+      <div className="p-3 p-sm-4 p-md-5 tintorange-bg">
         <SignInTabs/>
-        {/* <DescriptionLogin/> */}
       </div>
       <FooterBuyer/>
     </>

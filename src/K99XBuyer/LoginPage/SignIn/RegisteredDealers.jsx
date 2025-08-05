@@ -1,16 +1,10 @@
 import { motion, AnimatePresence} from "framer-motion"
 import OtpLogin from "./OtpLogin"
 import PasswordLogin from "./PasswordLogin"
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const RegisteredDealers = () => {
     const [activeTab, setActiveTab] = useState("otp");
-    const formRef = useRef(null);
-
-    //Scroll to form when tab changes
-    useEffect(() => {
-        formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, [activeTab])
 
     // Animation variant for form transition
     const formVariants = {
@@ -20,8 +14,7 @@ const RegisteredDealers = () => {
     };
 
   return (
-     <div ref={formRef} className="card-bg p-3 p-sm-4 p-lg-3 rounded-2 shadow-sm">
-
+     <div className="card-bg p-3 p-sm-4 p-lg-3 rounded-2 shadow-sm">
         {/* Title */}
         <motion.h3 className="primary-second-title mb-3"
          initial={{ opacity: 0, y: -10 }}

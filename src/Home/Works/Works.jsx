@@ -5,12 +5,26 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa"
+import { motion } from "framer-motion";
+
+const subtitle = "3 Simple Steps to Sell or Bid for a Used Car in K99X.";
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.3, duration: 0.5, ease: "easeOut" },
+  }),
+};
+
 const Works = () => {
   const [isMobile, setIsMobile] = useState(false);
   // Handle Resize
   useEffect(()=>{
     const handleResize = () => {
-       setIsMobile(window.innerWidth < 768 );
+       setIsMobile(window.innerWidth < 576);
     };
     handleResize(); //initial
     window.addEventListener("resize", handleResize);
@@ -18,9 +32,28 @@ const Works = () => {
     }, []);
 
   return (
-    <section className="p-3 p-sm-4 p-md-5 mt-4">
-        <h2 className="works-title">HOW IT WORKS</h2>
-        <p className="text-center fw-semibold fs-5 mb-5">3 simple steps to sell your car anywhere in India — fast and hassle-free.</p>
+    <section className="p-3 p-sm-4 p-md-5">
+       {/* title */}
+       <motion.h2 className="title blue-color"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+       >
+          HOW K99X <span className="green-color title">WORKS</span>
+       </motion.h2>
+
+       {/* Subtitle */}
+        <motion.p className="text-center text-secondary mb-4"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity:1 }}
+          transition={{ delay:0.3 }}
+          viewport={{ once: true }}
+        >
+          {subtitle}
+        </motion.p>
+
+        {/* Card and Carousel with Indicator */}
         <div className="row gy-4 gy-sm-5 justify-content-center">
          {
            isMobile ? 
@@ -32,15 +65,24 @@ const Works = () => {
               clickable: true, }}
             spaceBetween={20}
             slidesPerView={1}
-            className="d-md-none">
+            className="d-sm-none">
            {
-            ThreeSteps.map(({ id, icon, title, description })=>(
+            ThreeSteps.map(({ id, icon, title, description }, i)=>(
              <SwiperSlide key={id}>
-              <div className="card p-3 p-lg-4 d-flex flex-column align-items-center h-100 rounded-4 shadow-sm">
+              <motion.div className="green-bg-100 p-3 p-lg-4 d-flex flex-column 
+                align-items-center h-100 rounded-4 shadow-sm"
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                variants={cardVariant}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
                   <LazyLoadImage src={icon} className="weWorks-img mb-3"/>
-                  <h4 className="mb-2 steps-title">{title}</h4>
+                  <h4 className="text-capitalize fs-5 bold-900 mb-2">{title}</h4>
                   <p>{description}</p>
-              </div>
+              </motion.div>
             </SwiperSlide>
             ))
            }
@@ -49,21 +91,38 @@ const Works = () => {
             <div className="custom-pagination text-center"></div>
             </div>
         :
-          ThreeSteps.map(({ id, icon, title, description })=>(
-           <div className="col-sm-6 col-md-4" key={id}>
-             <div className="card p-3 p-lg-4 d-flex flex-column align-items-center h-100 rounded-4 shadow-sm">
+          ThreeSteps.map(({ id, icon, title, description }, i)=>(
+           <div className="col-6 col-lg-4" key={id}>
+             <motion.div className="green-bg-100 p-3 p-lg-4 d-flex flex-column 
+                align-items-center h-100 rounded-4 shadow"
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                variants={cardVariant}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                >
                 <LazyLoadImage src={icon} className="weWorks-img mb-4"/>
-                <h4 className="steps-title mb-3">{title}</h4>
+                <h4 className="text-capitalize fs-5 bold-900 mb-2">{title}</h4>
                 <p>{description}</p>
-             </div>
+             </motion.div>
            </div>
           ))
-        
          }
         </div>
-       <div className="text-center mt-4 mt-md-5">
-          <button className="learn-btn">LEARN MORE</button>
-       </div>
+
+        {/* Button - Learn more */}
+        <div className="d-flex justify-content-center mt-4 mt-md-5">
+          <motion.button 
+          className="primary-btn d-flex align-items-center gap-2 px-4 py-2"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+          >
+            LEARN MORE <FaArrowRight/>
+          </motion.button>
+        </div>
     </section>
   )
 }
@@ -72,21 +131,19 @@ export default Works
 
 const ThreeSteps = [
   {
-    id: 1,
-    icon: "Images/Home/instant-online-quote.png",
-    title: "NO-HAGGLE, INSTANT ONLINE QUOTE",
-    description: "Enter your car details (Maruti, Hyundai, Tata, etc.) and get a best-price quote in seconds — no account needed!",
+    title: "Register & List Your Car",
+    description: "Submit your vehicle details for free and get it verified for live auction.",
+    icon: "/Images/Home/how-works/register-list-car-k99x.jpeg",
   },
   {
-    id: 2,
-    icon: "Images/Home/vehicle-inspection-home.png",
-    title: "FREE DOORSTEP CAR INSPECTION",
-    description: "Choose a convenient time. Our expert will inspect your car at your home — 100% free, no pressure.",
+    title: "Get Inspected & Auction Live",
+    description: "We inspect your car and list it in our online auction for verified bidders.",
+    icon: "/Images/Home/how-works/inspection-live-auction.jpeg",
   },
   {
-    id: 3,
-    icon: "Images/Home/pick-up-amout-credited.png",
-    title: "INSTANT PAYMENT, SAME DAY PICKUP",
-    description: "Once you accept the offer, get paid instantly via UPI or bank transfer. We’ll handle the paperwork and pick up your car the same day.",
+    title: "Sell or Bid & Get Best Price",
+    description: "Highest bidder wins. Sellers get paid quickly, buyers get verified cars.",
+    icon: "/Images/Home/how-works/close-deal-get-the-price.jpeg",
   },
 ];
+

@@ -1,0 +1,9 @@
+.registration-input
+{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #E0DFDF;
+}

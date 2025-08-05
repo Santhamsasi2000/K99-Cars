@@ -1,22 +1,119 @@
 
 :root
 {
-  /* Primary Color */
-   --primary-color: #86efac;
-   --primary-title: #166534;
-   --card-bg: #f0fdf4;
-   --primary-color-100: #dcfce7;
+  /* --green-color: #27d366; - Client Given COlor  */
 
-   /* Secondary Color */
-   --secondary-color: #1E3A8A;
-   --card-bg-secondary: #eff3ff;
-   --secondary-color-100: #dbe4fe;
-   
-   
+  /* 600  */
+  --green-color: #17a24a;  
+
+  /* 900 */
+  --blue-color: #384473;
+
+  --tintorange-color: #fdf4eb;
+
+  --light-green: #d7fadb;
+
+  --dark-green: #5e8e66;
+
+  --blue-50: #f3f6fb;
+
+  --green-50: #f0fdf4;
+
+  --green-100: #dcfce7;
+
+  --blue-100: #e3eaf6;
+
+  --blue-200: #cedbef;
+
+  --green-200:  #bcf6d0;
+
+  /* --green-800: #176434; */
+  --green-700: #167f3d;
 }
+
+/* ====== All Text Colors =================*/
+
+.green-color
+{
+   color: var(--green-color);
+}
+
+.blue-color
+{
+  color: var(--blue-color);
+}
+
+.light-green
+{
+  color: var(--light-green);
+}
+
+.dark-green
+{
+  color: var(--dark-green);
+}
+
+.tintorange-color
+{
+  color: var(--tintorange-color);
+}
+
+/* ============= Background Color =============== */
+
+.green-bg
+{
+   background-color: var(--green-color);
+}
+
+.blue-bg
+{
+  background-color: var(--blue-color);
+}
+
+.light-bg
+{
+  background-color: var(--light-green);
+}
+
+.dark-bg
+{
+  background-color: var(--dark-green);
+}
+
+.tintorange-bg
+{
+  background-color: var(--tintorange-color);
+}
+
+.green-bg-50
+{
+   background-color: var(--green-50);
+}
+
+.blue-bg-50
+{
+   background-color: var(--blue-50);
+}
+
+.green-bg-100
+{
+  background-color: var(--green-100);
+}
+
+.blue-bg-100
+{
+  background-color: var(--blue-100);
+}
+
+
+
+
 
 /* styles.css or inline */
 body
 {
   scroll-behavior: smooth;
 }
+
+
+

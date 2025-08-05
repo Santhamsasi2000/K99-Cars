@@ -1,0 +1,29 @@
+.offerform-card
+{
+    background-color: var(--card-color);
+    width: 100%;
+    max-width: 500px;
+}
+
+.tab-btn
+{
+    background: #F3F6FB;
+    background: linear-gradient(90deg,rgba(243, 246, 251, 1) 0%, rgba(227, 234, 246, 1) 50%, rgba(206, 219, 239, 1) 100%);
+    color: var(--blue-color);
+    border: none;
+    font-weight: 900;
+    font-size: clamp(14px, 1.5vw, 22px);
+}
+
+.tab-btn:hover
+{
+   
+}
+
+.tab-btn.active
+{
+    background: #536EBD;
+    background: linear-gradient(90deg,rgba(83, 110, 189, 1) 0%, rgba(72, 93, 173, 1) 25%, rgba(64, 78, 141, 1) 50%, rgba(56, 68, 115, 1) 100%);
+    color: white;
+}
+

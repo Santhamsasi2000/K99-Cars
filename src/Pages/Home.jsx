@@ -1,15 +1,15 @@
-import AsSeenAs from "../Home/AsSeenAs/AsSeenAs"
 import Works from "../Home/Works/Works"
 import HeroSection from "../Home/HeroSection/HeroSection"
-import Navbar from "../Home/Navbar/Navbar"
-import Footer from "../Components/Footer"
+import Footer from "../Components/Footer/Footer"
+import AuctionsTable from "../Home/AuctionsTable/AuctionsHome"
+import NavBar from "../Home/Navbar/Navbar"
 
 const Home = () => {
   return (
     <>
-      <Navbar/>
+      <NavBar/>
       <HeroSection/>
-      {/* <AsSeenAs/> */}
+      <AuctionsTable/>
       <Works/>
       <Footer/>
     </>

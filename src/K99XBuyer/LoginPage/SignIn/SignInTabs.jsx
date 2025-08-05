@@ -53,7 +53,7 @@ const SignInTabs = () => {
   };
 
   return (
-    <motion.section className="mb-5"
+    <motion.section className=""
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -61,7 +61,7 @@ const SignInTabs = () => {
     >
 
         {/* title */}
-       <motion.h2 className="primary-title mb-4 mb-lg-5"
+       <motion.h2 className="blue-color title mb-4 mb-lg-5"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}

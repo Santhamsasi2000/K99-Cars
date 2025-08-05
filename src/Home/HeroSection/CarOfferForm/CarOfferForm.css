@@ -1,0 +1,13 @@
+.caroffer-title
+{
+    font-family: 900;
+    font-size: clamp(22px, 2vw + 1rem, 30px);
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.car-img
+{
+    width: 500px;
+    height: 200px;
+}

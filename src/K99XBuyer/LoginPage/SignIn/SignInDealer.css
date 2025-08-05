@@ -1,4 +1,4 @@
-/* Sign In tabs */
+/* Sign In tabs  */
 
 .activeTab-btn
 {
@@ -16,8 +16,12 @@
     transition: all 0.3s ease;
 }
 
-.activeTab-btn:hover,
+.activeTab-btn:hover,.normalTab-btn:hover 
+{
+  transform: none !important;
+}
+
 .normalTab-btn:hover 
 {
-  transform: scale(1.03);
+  background-color: #eff3ff;
 }

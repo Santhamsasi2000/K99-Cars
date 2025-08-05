@@ -1,0 +1,119 @@
+/* ==================   Main Tab  ===============================*/
+
+/* Live Auction Tab Btn */
+
+.main-tabBtn
+{
+  border-radius: 20px;
+  font-size: clamp(15px, 1.25vw + 0.5rem, 22px);
+}
+
+.sub-tabBtn
+{
+  border-radius: 20px;
+  font-size: clamp(14px, 1.25vw + 0.5rem, 18px);
+}
+
+.normalLive-btn,.normalLive-subBtn
+{
+  /* background-color: var(--blue-50); */
+  background: #F3F6FB;
+  background: linear-gradient(90deg,rgba(243, 246, 251, 1) 0%, rgba(227, 234, 246, 1) 50%, rgba(206, 219, 239, 1) 100%);
+  border: none;
+  color: var(--blue-color);
+  border: 2px solid var(--blue-200);
+}
+
+.activeLive-btn,.activeLive-subBtn
+{
+  /* background-color: var(--blue-color); */
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  background: #536EBD;
+  background: linear-gradient(90deg,rgba(83, 110, 189, 1) 0%, rgba(72, 93, 173, 1) 25%, rgba(64, 78, 141, 1) 50%, rgba(56, 68, 115, 1) 100%);
+}
+
+/* Upcoming Auctions Tab Btn */
+.normalUpcoming-btn,.normalUpcoming-subBtn
+{
+  /* background-color: var(--green-50); */
+  background: #F0FDF4;
+  background: linear-gradient(90deg,rgba(240, 253, 244, 1) 0%, rgba(220, 252, 231, 1) 50%, rgba(188, 246, 208, 1) 100%);
+  color: var(--green-color);
+  border: 2px solid var(--green-200);
+}
+
+.activeUpcoming-btn,.activeUpcoming-btn
+{
+  /* background-color: #167f3d; */
+  background: #24C35E;
+  background: linear-gradient(90deg, rgba(36, 195, 94, 1) 0%, rgba(23, 162, 74, 1) 25%, rgba(22, 127, 61, 1) 50%, rgba(23, 100, 52, 1) 75%, rgba(21, 82, 45, 1) 100%);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.normalLive-btn:hover,.normalLive-subBtn:hover,.sub-auctionCard:hover 
+{
+  border: 2px solid #6686cb !important;
+  transition: all 0.5s ease;
+}
+
+.normalUpcoming-btn:hover,.normalUpcoming-subBtn:hover
+{
+  border: 2px solid #23c45e;
+  transition: all 0.5s ease;
+}
+
+/* ==============2D ICons  - Tab Button  =================*/
+
+.mainTab-icon
+{
+  width: 50px;
+  height: 50px;
+}
+
+.subTab-icon
+{
+  width: 30px;
+  height: 30px;
+}
+
+/* Main Card Bg */
+
+.main-auctionCard
+{
+ border-radius: 30px;
+}
+
+/* ================== Responsive Code ==================== */
+@media (max-width: 576px)
+{
+  .mainTab-icon
+  {
+    width: 40px;
+    height: 40px;
+  }
+  .subTab-icon
+  {
+    width: 20px;
+    height: 20px;
+  }
+  .main-auctionCard
+  {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 400px)
+{
+  .main-tabBtn
+  {
+    padding: 10px !important;
+  }
+  .sub-tabBtn
+  {
+    padding: 9px !important;
+  }
+}

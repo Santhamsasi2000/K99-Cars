@@ -4,6 +4,8 @@ import { FaGaugeHigh } from "react-icons/fa6";
 import StatsCard from "./StatsCard";
 import QuickActions from "./QuickActions";
 import RecentActivity from "./RecentActivity";
+import EndingSoon from "./EndingSoon";
+import Notifications from "./Notifications";
 const DashboardDealer = () => {
   return (
     <section className="p-3 p-sm-4 p-md-5">
@@ -24,8 +26,17 @@ const DashboardDealer = () => {
        <StatsCard/>
        {/* Quick Actions */}
        <QuickActions/>
-       {/* Recent Activity */}
-       <RecentActivity/>
+       <div className="row gy-5">
+          <div className="col-lg-8">
+            <RecentActivity/>
+          </div>
+          <div className="col-lg-4">
+            {/* Ending Soon */}
+            <EndingSoon/>
+            {/* Notifications */}
+            <Notifications/>
+          </div>
+       </div>
     </section>
   )
 }

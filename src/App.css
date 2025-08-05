@@ -1,25 +1,25 @@
-/* Body - Nunito Sans */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-/*Title - Bebas Neue */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-/* Title - Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-*
+body
 {
-    font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+/* common-btn */
+.common-btn
+{
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+
 /* ========== Primary Color =============*/
-.primary-title
+.title
 {
   font-family: "Inter", sans-serif;
-  color: var(--primary-title);
   text-align: center;
-  font-size: clamp(25px, 1.67vw + 19.65px, 35px);
+  font-size: clamp(35px, 1.67vw + 19.65px, 45px);
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .primary-second-title
@@ -34,19 +34,9 @@
   color: var(--primary-title);
 }
 
-.primary-color
-{
-  color: var(--primary-color);
-}
-
 .card-bg
 {
   background-color: var(--card-bg);
-}
-
-.navbar-bg
-{
-  background-color: var(--primary-color);
 }
 
 .primary-border
@@ -85,6 +75,15 @@
   background-color: var(--secondary-color-100);
 }
 
+.secondary-btn
+{
+  background-color: var(--secondary-color);
+  border-radius: 50rem;
+  color: white !important;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 .secondary-outline-btn
 {
   background-color: var(--card-bg);
@@ -98,7 +97,7 @@
 /* Button */
 .primary-btn
 {
-  background-color: #16a34a;
+  background-color: var(--primary-btn);
   color: white;
   border: none;
   font-weight: 900;
@@ -116,29 +115,27 @@
   border-radius: 50rem;
 }
 
-
-
-.common-btn
-{
-   background-color: #ffd94f;
-   border-radius: 50rem;
-   border: none;
-   font-weight: 900;
-   font-size: 22px;
-   font-family: "Bebas Neue", sans-serif;
-}
-
-.common-btn:hover
-{
-  background-color: #F5C617;
-}
-
 /* Form */
 .form-control:focus 
 {
   box-shadow: none;
   outline: none;
   border-color: var(--secondary-color); /* Optional: same as default border */
+}
+
+.form-select:focus
+{
+  border: 2px solid  var(--secondary-color);
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="checkbox"].form-check-input:checked 
+{
+  background-color: var(--secondary-color); /* Change this to your desired color */
+  border-color: #28a745;
+  box-shadow: none;
+  outline: none;
 }
 
 

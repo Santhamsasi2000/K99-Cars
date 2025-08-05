@@ -22,13 +22,17 @@ const PasswordLogin = () => {
 
   const formik = useFormik({
     initialValues: {
-      username: "",
+      email: "",
       password: "",
       rememberMe: false,
     },
     validationSchema: Yup.object({
-      username: Yup.string().required("Please enter your username or email"),
-      password: Yup.string().required("Please enter your password"),
+      email: Yup.string().email("Invalid Email").required("Please enter your username or email"),
+      password: Yup.string().required("Please enter your password")
+       .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
+      "Must be 6+ chars with A-Z, a-z, 0-9 & symbol"
+     ),
     }),
     onSubmit: (values) => {
       navigate("/update-details")
@@ -46,8 +50,8 @@ const PasswordLogin = () => {
       <motion.div className="mb-3"
         variants={fadeInUp} 
         custom={0}>
-        <label htmlFor="username" className="form-label fw-bold">
-          Username or Email
+        <label htmlFor="email" className="form-label fw-bold">
+          Email
         </label>
         <div className="input-group">
           <span className="input-group-text secondary-color">
@@ -55,10 +59,10 @@ const PasswordLogin = () => {
           </span>
           <motion.input
             type="text"
-            id="username"
-            name="username"
+            id="email"
+            name="email"
             className="form-control" 
-            placeholder="Enter your username"
+            placeholder="Enter your Email"
             value={formik.values.username}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -66,8 +70,8 @@ const PasswordLogin = () => {
             transition={{ type: "spring", stiffness: 300 }}
           />
         </div>
-        {formik.touched.username && formik.errors.username && (
-          <p className="text-danger mt-2">{formik.errors.username}</p>
+        {formik.touched.email && formik.errors.email && (
+          <p className="text-danger mt-2">{formik.errors.email}</p>
         )}
       </motion.div>
 
