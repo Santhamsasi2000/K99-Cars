@@ -54,7 +54,7 @@
   transition: all 0.3s ease;
 }
 
-.normalLive-btn:hover,.normalLive-subBtn:hover,.sub-auctionCard:hover 
+.normalLive-btn:hover,.normalLive-subBtn:hover
 {
   border: 2px solid #6686cb !important;
   transition: all 0.5s ease;

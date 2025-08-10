@@ -57,26 +57,26 @@ const SignUpForm = () => {
 
   return (
      <motion.section 
-      className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100"
+      className="tintorange-bg p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100"
       initial="hidden"
       animate={controls}
       variants={fadeInUp}>
-       <motion.h2 className="primary-title mb-4"
+       <motion.h2 className="title blue-color mb-4"
          initial={{ opacity: 0, y: -20 }}
          whileInView={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut"}}>Become a dealer</motion.h2>
-       <motion.div className="card-bg p-3 p-sm-5 rounded-3 shadow"
+       <motion.div className="green-bg-50 shadow p-3 p-sm-5 rounded-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
        >
-         <h5 className="primary-second-title">Create Your Account</h5>
+         <h5 className="green-color fs-5 fw-bold">Create Your Account</h5>
          <p>Fill in the details below to get started.</p>
          <form onSubmit={formik.handleSubmit}>
           {/* First and Last names */}
           <div className="row mb-4 gy-4">
             <div className="col-sm-6">
-              <label htmlFor="firstName" className="form-label fw-bold">First Name<span className="ms-2 secondary-color">*</span></label>
+              <label htmlFor="firstName" className="form-label fw-bold">First Name<span className="ms-2 text-danger">*</span></label>
               <motion.input
                 type="text"
                 className="form-control"
@@ -94,7 +94,7 @@ const SignUpForm = () => {
               )}
             </div>
             <div className="col-sm-6">
-              <label htmlFor="lastName" className="form-label fw-bold">Last Name<span className="ms-2 secondary-color">*</span></label>
+              <label htmlFor="lastName" className="form-label fw-bold">Last Name<span className="ms-2 text-danger">*</span></label>
               <motion.input
                 type="text"
                 className="form-control"
@@ -114,7 +114,7 @@ const SignUpForm = () => {
           </div>
           {/* pan card */}
           <div className="mb-4">
-            <label htmlFor="panCard" className="form-label fw-bold">Pan Card<span className="ms-2 secondary-color">*</span></label>
+            <label htmlFor="panCard" className="form-label fw-bold">Pan Card<span className="ms-2 text-danger">*</span></label>
             <motion.input
               type="text"
               className="form-control"
@@ -134,7 +134,7 @@ const SignUpForm = () => {
           {/* State and Mobile Number */}
           <div className="row mb-4 gy-4">
             <div className="col-sm-6">
-              <label htmlFor="state" className="form-label fw-bold">State<span className="ms-2 secondary-color">*</span></label>
+              <label htmlFor="state" className="form-label fw-bold">State<span className="ms-2 text-danger">*</span></label>
               <select
                 className="form-select"
                 id="state"
@@ -154,7 +154,7 @@ const SignUpForm = () => {
             </div>
             <div className="col-sm-6">
               <label htmlFor="mobileNo" className="form-label fw-bold">
-                Mobile Number<span className="ms-2 secondary-color">*</span></label>
+                Mobile Number<span className="ms-2 text-danger">*</span></label>
               <motion.input
                 type="tel"
                 className="form-control"
@@ -193,7 +193,7 @@ const SignUpForm = () => {
            {/* Send OTP - btn*/}
            <motion.button 
            type="submit" 
-           className="primary-btn px-4 py-2"
+           className="px-5 py-2 green-darkBg text-white text-decoration-none rounded-4 border-0"
            whileHover={{ scale: 1.05 }}
            whileTap={{ scale: 0.95 }}
            transition={{ duration: 0.2 }}>

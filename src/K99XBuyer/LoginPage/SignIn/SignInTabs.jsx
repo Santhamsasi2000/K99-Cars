@@ -69,8 +69,8 @@ const SignInTabs = () => {
         Dealer Login</motion.h2>
 
         {/* grid */}
-        <div className="row gy-5">
-         <motion.div className="col-lg-6"
+        <div className="row gy-5 align-items-center align-items-lg-start">
+         <motion.div className="col-md-9 col-lg-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}>
@@ -78,7 +78,7 @@ const SignInTabs = () => {
          </motion.div>
 
          {/* New Dealers */}
-         <motion.div className="col-lg-6"
+         <motion.div className="col-md-9 col-lg-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}>

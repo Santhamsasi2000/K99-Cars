@@ -4,12 +4,12 @@ import { MdOutlineClear } from "react-icons/md"
 
 const FilterAuction = () => {
   return (
-    <section className="shadow rounded-2 overflow-hidden">
-        <p className="navbar-bg secondary-color fs-5 fw-bold mb-0 d-flex align-items-center gap-2 py-2 px-3">
-            <FaFilter className="fs-4"/>
+    <section className="shadow rounded-3 overflow-hidden">
+        <p className="py-2 px-4 green-bg-200 skyBlue-600 fs-5 fw-bold mb-0 d-flex align-items-center gap-2">
+            <FaFilter className=""/>
             <span>Filters</span>
         </p>
-        <div className="p-3 card-bg">
+        <div className="p-3 green-bg-50">
             <div className="row gy-4 mb-4">
                 {/* State */}
                 <div className="col-sm-6 col-lg-3">
@@ -64,8 +64,8 @@ const FilterAuction = () => {
                 </div>
                 {/* Buttons - Filter and Clear*/}
                 <div className="col-lg-6">
-                    <button className="primary-btn py-2 px-4 px-sm-5 d-inline-flex align-items-center gap-1 me-3"><IoSearch />Apply Filters</button>
-                    <button className="secondary-outline-btn  py-2 px-4 px-sm-5 d-inline-flex align-items-center gap-1"><MdOutlineClear />Clear</button>
+                    <button className="green-bg text-white rounded-4 border-0 py-2 px-4 px-sm-5 d-inline-flex align-items-center gap-1 me-3"><IoSearch />Apply Filters</button>
+                    <button className="sky-bg-200 text-dark rounded-4 border-0  py-2 px-4 px-sm-5 d-inline-flex align-items-center gap-1"><MdOutlineClear />Clear</button>
                 </div>
             </div>
         </div>

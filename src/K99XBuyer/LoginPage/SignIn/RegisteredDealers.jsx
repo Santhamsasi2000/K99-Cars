@@ -14,9 +14,9 @@ const RegisteredDealers = () => {
     };
 
   return (
-     <div className="card-bg p-3 p-sm-4 p-lg-3 rounded-2 shadow-sm">
+     <div className="green-bg-50 p-3 p-sm-4 p-lg-4 rounded-4 shadow">
         {/* Title */}
-        <motion.h3 className="primary-second-title mb-3"
+        <motion.h3 className="green-color fs-5 fw-bold mb-3"
          initial={{ opacity: 0, y: -10 }}
          animate={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.4}}>
@@ -32,24 +32,21 @@ const RegisteredDealers = () => {
         </motion.p>
 
         {/* Tab Button */}
-        <div className="d-flex my-3">
+        <div className="d-flex my-3 my-sm-4">
             <motion.button 
               type="button"
-               className={`px-3 px-md-5 px-sm-4 py-2 rounded-start-2 rounded-end-0 ${
-                activeTab === "otp" ? "activeTab-btn" : "normalTab-btn"}`}
+               className={`px-4 py-2 rounded-start-3 rounded-end-0 shadow
+                ${activeTab === "otp" ? "blue-darkBg text-white border-0" : "normalTab-signIn border blue-lightBg blue-color"}`}
                 onClick={() => setActiveTab("otp")}
-                whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.02 }}>
-                Login Using OTP
+                >
+                OTP Login
             </motion.button>
             <motion.button 
              type="button"
-             className={`px-3 px-md-5 px-sm-4 py-2 rounded-start-0 rounded-end-2 
-             ${activeTab === "password" ? "activeTab-btn" : "normalTab-btn"}`}
-             onClick={()=>setActiveTab("password")}
-             whileTap={{ scale: 0.95 }}
-             whileHover={{ scale: 1.02 }}>
-            Login Using Password</motion.button>
+             className={`px-4 py-2 rounded-start-0 rounded-end-3 shadow
+             ${activeTab === "password" ? "blue-darkBg text-white border-0" : "normalTab-signIn border blue-lightBg blue-color"}`}
+             onClick={()=>setActiveTab("password")}>
+            Password Login</motion.button>
         </div>
 
         {/* Dynamic Form Content*/}

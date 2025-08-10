@@ -6,9 +6,9 @@ import { IoMdClose } from "react-icons/io";
 const BiddingActivity = () => {
   return (
      <div className="mt-5">
-      <p className="mb-3 primary-second-title mb-0 
+      <p className="mb-3 mb-0 skyBlue-600 fw-bold
       d-flex align-items-center justify-content-center gap-2 fs-4">
-        <FaHistory className="fs-5"/>
+        <FaHistory className="fs-4"/>
         Recent Bidding Activity
       </p>
       {/* Grid */}
@@ -16,23 +16,23 @@ const BiddingActivity = () => {
         {
          recentBids.map(({ id, vehicle, vin, bid, status, date, action, actionIcon: Icon}) => (
           <div className="col-sm-6 col-lg-4" key={id}>
-            <div className="card-bg p-3 h-100 rounded-2 shadow primary-border">
-              <p className="secondary-color fw-bold d-flex align-items-center gap-1">
+            <div className="green-bg-50 p-3 h-100 rounded-2 shadow primary-border">
+              <p className="fw-bold d-flex align-items-center gap-1">
                 <BsCalendarDateFill />
                 {date}
               </p>
-              <p className="primary-title fs-6 mb-2">{vehicle}</p>
+              <p className="green-color fw-bold text-center fs-6 mb-2">{vehicle}</p>
               <p className="text-secondary text-center">Vin: {vin}</p>
               <div className="d-flex justify-content-between">
-                <p className="fs-6 primary-second-title d-flex align-items-center gap-1">
+                <p className="fs-6 d-flex align-items-center gap-1">
                   <FaSackDollar />
                   {bid}
                 </p>
-                <p className="secondary-bg text-white px-2 rounded-1">{status}</p>
+                <p className="sky-bg-600 text-white px-2 rounded-1">{status}</p>
               </div>
               <div className="d-flex justify-content-center">
                 <p className="d-inline-flex align-items-center gap-1
-                secondary-color auction-border px-2 rounded-1"><Icon/> {action}</p>
+                skyBlue-outline-btn px-3"><Icon/> {action}</p>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ const BiddingActivity = () => {
       </div>
       {/* Button */}
       <div className="d-flex justify-content-center mt-4">
-        <button className="primary-btn px-4 py-2 d-flex align-items-center gap-2">View All <FaArrowRight /></button>
+        <button className="green-darkBg text-white rounded-4 border-0 px-4 py-2 d-flex align-items-center gap-2">View All <FaArrowRight /></button>
       </div>
      </div>
   )

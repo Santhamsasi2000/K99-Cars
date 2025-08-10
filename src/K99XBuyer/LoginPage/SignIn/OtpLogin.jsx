@@ -28,7 +28,7 @@ const OtpLogin = () => {
        transition={{ duration: 0.4 }}
        className="form-container"
       >
-        <motion.div className="mb-4"
+        <motion.div className="mb-4 col-sm-6"
          initial={{ opacity: 0, y: 20 }}
          animate={{ opacity: 1, y: 0 }}
          transition={{ delay: 0.1 }}>
@@ -53,7 +53,7 @@ const OtpLogin = () => {
         {/* Submit Button */}
         <motion.button 
           type="submit" 
-          className="primary-btn px-5 py-2"
+          className="px-5 py-2 green-darkBg text-white text-decoration-none rounded-4 border-0"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}

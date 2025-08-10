@@ -3,21 +3,23 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import HeroSection from './Home/HeroSection/HeroSection.jsx'
-import Home from './Pages/Home.jsx'
-import AuctionsHome from './Home/AuctionsTable/AuctionsHome.jsx'
-import Footer from './Components/Footer/Footer.jsx'
-import Works from './Home/Works/Works.jsx'
+import UploadDocuments from './K99XBuyer/LoginPage/UpdateProfile/UploadDocuments.jsx'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import DashboardDealer from './K99XBuyer/DashboardDealer/DashboardDealer.jsx'
 import NavDealer from './K99XBuyer/NavDealer/NavDealer.jsx'
-import UpcomingAuctionsTab from './Home/AuctionsTable/UpcomingTab/UpcomingAuctionsTab.jsx'
-import ConsumerUpcoming from './Home/AuctionsTable/UpcomingTab/ConsumerUpcoming.jsx'
-import NavBar from './Home/Navbar/Navbar.jsx'
-import SignInDealer from './K99XBuyer/LoginPage/SignIn/SignInDealer.jsx'
+import Auctions from './K99XBuyer/Auctions/Auctions.jsx'
+import MyAccount from './K99XBuyer/MyAccount/MyAccount.jsx'
+import VehicleFilterSidebar from './K99XBuyer/Auctions/VehicleFilterSidebar/VehicleFilterSidebar.jsx'
+import LiveAuction from './K99XBuyer/Auctions/LiveAuction.jsx'
+import Home from './Pages/Home.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StrictMode>
-      <SignInDealer/>
+      {/* <VehicleFilterSidebar/> */}
+      {/* <LiveAuction/> */}
+      {/* <Home/> */}
+      <App/>
     </StrictMode>
   </BrowserRouter>
 )

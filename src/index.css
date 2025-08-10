@@ -29,6 +29,19 @@
 
   /* --green-800: #176434; */
   --green-700: #167f3d;
+
+  /* Sky Blue */
+  --sky-blue-50: #eff9ff
+  ;
+  --sky-blue-100: #def3ff;
+
+  --sky-blue-200: #b6e8ff;
+
+  --sky-blue-500: #01a0e2;
+
+  --sky-blue-600: #008cd3;
+
+  --sky-blue-700: #006faa;
 }
 
 /* ====== All Text Colors =================*/
@@ -56,6 +69,16 @@
 .tintorange-color
 {
   color: var(--tintorange-color);
+}
+
+.skyBlue-600
+{
+  color: var(--sky-blue-600);
+}
+
+.skyBlue-700
+{
+  color: var(--sky-blue-700);
 }
 
 /* ============= Background Color =============== */
@@ -100,11 +123,72 @@
   background-color: var(--green-100);
 }
 
+.green-bg-200
+{
+  background-color: var(--green-200);
+}
+
 .blue-bg-100
 {
   background-color: var(--blue-100);
 }
 
+.sky-bg-50
+{
+  background-color: var(--sky-blue-50);
+}
+
+.sky-bg-100
+{
+  background-color: var(--sky-blue-100);
+}
+
+.sky-bg-200
+{
+  background-color: var(--sky-blue-200);
+}
+
+.sky-bg-600
+{
+  background-color: var(--sky-blue-600);
+}
+
+/* Border */
+.skyBlue-border-200
+{
+  border: 2px solid var(--sky-blue-200);
+}
+
+.green-border-200
+{
+  border: 2px solid var(--green-200);
+}
+
+/* Common Btn */
+
+.blue-lightBg
+{
+  background: #F3F6FB;
+  background: linear-gradient(90deg,rgba(243, 246, 251, 1) 0%, rgba(227, 234, 246, 1) 50%, rgba(206, 219, 239, 1) 100%);
+}
+
+.blue-darkBg
+{
+  background: #536EBD;
+  background: linear-gradient(90deg,rgba(83, 110, 189, 1) 0%, rgba(72, 93, 173, 1) 25%, rgba(64, 78, 141, 1) 50%, rgba(56, 68, 115, 1) 100%);
+}
+
+.green-lightBg
+{
+  background: #F0FDF4;
+  background: linear-gradient(90deg,rgba(240, 253, 244, 1) 0%, rgba(220, 252, 231, 1) 50%, rgba(188, 246, 208, 1) 100%);
+}
+
+.green-darkBg
+{
+  background: #24C35E;
+  background: linear-gradient(90deg, rgba(36, 195, 94, 1) 0%, rgba(23, 162, 74, 1) 25%, rgba(22, 127, 61, 1) 50%, rgba(23, 100, 52, 1) 75%, rgba(21, 82, 45, 1) 100%);
+}
 
 
 

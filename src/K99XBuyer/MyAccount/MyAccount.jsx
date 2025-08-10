@@ -1,6 +1,6 @@
 import { MdManageAccounts, MdOutlineAccessTimeFilled } from 'react-icons/md';
 import './MyAccount.css';
-import { FaUser } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import AccountInformation from './AccountInformation';
 import ChangePassword from './ChangePassword';
 import BiddingActivity from './BiddingActivity/BiddingActivity';
@@ -11,9 +11,9 @@ import MyStatistics from './MyStatistics';
 const MyAccount = () => {
   return (
     <section className='p-3 p-sm-4 p-md-5'>
-      <header className='d-flex align-items-center gap-1'>
-        <MdManageAccounts className='fs-1 primary-title'/>
-        <h2 className='primary-title'>My Account & Wallet</h2>
+      <header className='d-flex align-items-center gap-2'>
+        <FaUserCircle className='buyer-title green-color mb-2'/>
+        <h2 className='buyer-title green-color'>My Account & Wallet</h2>
       </header>
       <p className='text-secondary'>Manage your profile, wallet, and auction activity</p>
       

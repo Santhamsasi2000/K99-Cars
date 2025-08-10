@@ -71,7 +71,7 @@ const HeroSection = () => {
 
     {/* Instant Offer Btn */}
     <div className="px-3 px-sm-4 px-md-5 row justify-content-center justify-content-lg-end align-items-end gx-0 w-100">
-      <div className="col-lg-5" style={{maxWidth: "500px"}}>
+      <div className="col-lg-5 offer-btn-size">
         <NavLink 
         className="instant-offer-btn py-3 w-100 rounded-bottom-4 
         d-flex justify-content-center align-items-center">

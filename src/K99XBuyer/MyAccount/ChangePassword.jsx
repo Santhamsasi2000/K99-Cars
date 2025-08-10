@@ -4,12 +4,12 @@ const ChangePassword = () => {
   return (
     <>
       {/* title */}
-      <h5 className="primary-second-title mb-3 d-flex align-items-center gap-2">
+      <h5 className="skyBlue-600 fw-bold mb-3 d-flex align-items-center gap-2">
         <FaLock className="fs-5"/>
         <span>Change Password</span>
       </h5>
       {/* Profile Update - Form */}
-      <form className="p-4 card-bg rounded-3 shadow">
+      <form className="p-4 green-bg-50 rounded-3 shadow">
         {/* Current Password */}
         <div className="mb-4">
           <label for="password" className="form-label">Current Password</label>
@@ -31,7 +31,7 @@ const ChangePassword = () => {
           </div>
         </div>
         {/* Update profile - Button */}
-        <button className='primary-btn px-4 py-2 d-flex align-items-center gap-2'> <FaKey className='fs-5'/>Change Password</button>
+        <button className='green-bg text-white rounded-4 border-0 px-4 py-2 d-flex align-items-center gap-2'> <FaKey className='fs-5'/>Change Password</button>
       </form>
     </>
   )

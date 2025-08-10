@@ -7,6 +7,7 @@ import DashboardDealer from "../DashboardDealer/DashboardDealer";
 import LiveAuctions from "../Auctions/Auctions";
 import MyAccount from "../MyAccount/MyAccount";
 import FooterBuyer from "../FooterBuyer/FooterBuyer";
+import FooterDashboard from "../FooterBuyer/FooterDashboard";
 
 const NavDealer = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,12 +30,12 @@ const NavDealer = () => {
 
   return (
   <>
-   <nav className="navbar navbar-expand-md  p-3 p-sm-4 navbar-bg">
+   <nav className="sky-bg-50 navbar navbar-expand-md p-3 p-sm-4">
       <div className="container-fluid p-0">
         {/* Brand */}
         <NavLink to="/" className="secondary-color d-flex align-items-center gap-2 text-decoration-none">
-          <FaCarAlt className="fs-4" />
-          <h1 className="fs-4 mb-0 bold-900">K99X</h1>
+          {/* <FaCarAlt className="fs-4" /> */}
+          <h1 className="green-color fs-4 mb-0 bold-900">K99X</h1>
         </NavLink>
 
         {/* Toggle Button */}
@@ -44,9 +45,9 @@ const NavDealer = () => {
           onClick={toggleMenu}
         >
           {menuOpen ? (
-            <RxCross1 className="fs-4 text-dark" />
+            <RxCross1 className="fs-4 skyBlue-600" />
           ) : (
-            <RxHamburgerMenu className="fs-4 text-dark" />
+            <RxHamburgerMenu className="fs-4 skyBlue-600" />
           )}
         </button>
 
@@ -101,7 +102,7 @@ const NavDealer = () => {
    </Routes>
 
    {/* Footer */}
-   <FooterBuyer/>
+   <FooterDashboard/>
   </>
   );
 };

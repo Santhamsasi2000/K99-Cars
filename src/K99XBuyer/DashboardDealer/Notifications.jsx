@@ -4,7 +4,7 @@ const Notifications = () => {
   return (
     <div className="overflow-hidden shadow rounded-3">
         {/* Title */}
-        <h5 className="navbar-bg secondary-color py-2 px-3 fw-bold mb-0 d-flex align-items-center fs-5">
+        <h5 className="green-bg-200 skyBlue-700 py-2 px-3 fw-bold mb-0 d-flex align-items-center fs-5">
             <IoMdNotifications className="fs-4 me-1"/>
             Notifications
         </h5>
@@ -12,8 +12,8 @@ const Notifications = () => {
         <div className="p-3">
         {
             notifications.map(({ id, icon: Icon, content}) => (
-                <div key={id} className="py-2 px-3 rounded-2 mb-3" style={{backgroundColor: "#dcfce7"}}>
-                <p className="mb-0 small d-flex align-items-center gap-2"><Icon className="secondary-color"/>{content}</p>
+                <div key={id} className="sky-bg-50 py-2 px-3 rounded-2 mb-3">
+                <p className="mb-0 small d-flex align-items-center gap-2"><Icon className="skyBlue-600"/>{content}</p>
                 </div>
             ))
         }

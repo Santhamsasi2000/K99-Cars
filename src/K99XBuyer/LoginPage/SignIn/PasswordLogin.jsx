@@ -46,8 +46,8 @@ const PasswordLogin = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       className="form-container">
-      {/* Username */}
-      <motion.div className="mb-3"
+      {/* Email */}
+      <motion.div className="mb-3 col-sm-6"
         variants={fadeInUp} 
         custom={0}>
         <label htmlFor="email" className="form-label fw-bold">
@@ -76,7 +76,7 @@ const PasswordLogin = () => {
       </motion.div>
 
       {/* Password */}
-      <motion.div className="mb-3"
+      <motion.div className="mb-3 col-sm-6"
          variants={fadeInUp} custom={1}>
         <label htmlFor="password" className="form-label fw-bold">
           Password
@@ -123,12 +123,12 @@ const PasswordLogin = () => {
         className="d-flex align-items-center gap-3 gap-sm-4">
         <motion.button
           type="submit"
-          className="primary-btn px-5 py-2"
+          className="px-5 py-2 green-darkBg text-white text-decoration-none rounded-4 border-0"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
         >Login</motion.button>
-        <NavLink to="/forgot-password" className="secondary-color">
+        <NavLink to="/forgot-password" className="blue-color">
           Forgot your password?
         </NavLink>
       </div>

@@ -21,6 +21,7 @@ const subtitle = "Access verified bank repossessed cars available for bidding";
         },
       }),
   };
+  
 const BankLive = () => {
   return (
     <motion.section 

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const NavBar = () => {
 
   return (
   <>
-   <nav className="navbar navbar-expand-sm p-3 p-sm-4 fixed-top">
+   <nav className="tintorange-bg navbar navbar-expand-sm p-3 p-sm-4 fixed-top">
       <div className="container-fluid p-0">
         {/* Brand */}
         <NavLink to="/" className="green-color d-flex align-items-center gap-2 text-decoration-none">

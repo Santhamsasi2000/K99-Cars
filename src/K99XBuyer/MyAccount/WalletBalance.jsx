@@ -11,17 +11,17 @@ const WalletBalance = () => {
   return (
     <>
      <section className="rounded-3 overflow-hidden shadow mb-5">
-      <div className="navbar-bg secondary-color">
+      <div className="green-bg-200 skyBlue-600">
         <p className="fw-bold fs-5 mb-0 py-2 px-3 d-flex align-items-center gap-2">
             <FaWallet className="fs-5"/>
             Wallet Balance
         </p>
       </div>
-      <div className="p-3 d-flex flex-column align-items-center w-100 card-bg shadow ">
-         <h4 className="primary-title">$ 25,000.00</h4>
+      <div className="green-bg-50 p-3 d-flex flex-column align-items-center w-100 shadow ">
+         <h4 className="green-color fw-bold">$ 25,000.00</h4>
          <p className="text-secondary">Available for bidding</p>
-         <button onClick={()=> setAddFunds(true)} className="primary-btn py-2 mb-3 d-flex align-items-center w-100 justify-content-center gap-1"><IoMdAdd className="fs-5"/>Add Funds</button>
-         <button onClick={()=> setWithdraw(true)}  className="primary-btn py-2 d-flex align-items-center w-100 justify-content-center gap-1"><FiMinus className="fs-5"/> Withdraw</button>
+         <button onClick={()=> setAddFunds(true)} className="sky-bg-600 text-white border-0 rounded-4 py-2 mb-3 d-flex align-items-center w-100 justify-content-center gap-1"><IoMdAdd className="fs-5"/>Add Funds</button>
+         <button onClick={()=> setWithdraw(true)}  className="green-bg text-white border-0 rounded-4 py-2 py-2 d-flex align-items-center w-100 justify-content-center gap-1"><FiMinus className="fs-5"/> Withdraw</button>
       </div>
      </section>
 
@@ -29,14 +29,13 @@ const WalletBalance = () => {
       {
           addFunds && (
           <div className="pop-up" onClick={()=>setAddFunds(false)}>
-            <div className="card shadow-sm pop-up-card" onClick={(e) => e.stopPropagation()}>
-              <div className="d-flex justify-content-between align-items-center p-3">
+            <div className="shadow pop-up-card" onClick={(e) => e.stopPropagation()}>
+              <div className="green-bg-200 skyBlue-600 d-flex justify-content-between align-items-center p-3">
                 <h6 className="mb-0 fw-bold fs-5">Add Funds to Wallet</h6>
-                <i className="text-secondary fs-5" onClick={()=>setAddFunds(false)}><RxCross1/></i>
+                <i onClick={()=>setAddFunds(false)}><RxCross1 className="skyBlue-600 fs-5"/></i>
               </div>
-              <div className="border"></div>
               <form>
-                <div className="p-3">
+                <div className="p-3 green-bg-50">
                   <div class="mb-3">
                     <label for="amount" class="form-label">Amount ($)</label>
                     <input type="email" class="form-control" id="amount" placeholder="Enter amount"/>
@@ -50,17 +49,16 @@ const WalletBalance = () => {
                       <option value="3">Three</option>
                     </select>
                   </div>
-                  <div className="card bg-info bg-opacity-25 border-info">
-                    <p className="d-flex gap-3 align-items-center p-3 mb-0">
-                      <FaCircleInfo />
+                  <div className="sky-bg-100 rounded-3 ">
+                    <p className="d-flex gap-2 align-items-center p-3 mb-0">
+                      <FaCircleInfo className="green-color fs-5"/>
                       Funds typically arrive within 1-2 business days.
                     </p>
                   </div>
                 </div>
-                <div className="border"></div>
-                <div className="d-flex gap-3 justify-content-end p-3">
-                  <button className="btn btn-secondary">Cancel</button>
-                  <button className="btn btn-success">Add Funds</button>
+                <div className="green-bg-200 d-flex gap-3 justify-content-end p-3">
+                  <button className="sky-bg-100 px-3 py-1 skyBlue-border-200  rounded-3">Cancel</button>
+                  <button className="sky-bg-600 text-white px-3 py-1 border-0 rounded-3">Add Funds</button>
                 </div>
               </form>
             </div>
@@ -72,14 +70,14 @@ const WalletBalance = () => {
       {
           withdraw && (
           <div className="pop-up" onClick={()=>setWithdraw(false)}>
-            <div className="card shadow-sm pop-up-card" onClick={(e) => e.stopPropagation()}>
-              <div className="d-flex justify-content-between align-items-center p-3">
+            <div className="shadow pop-up-card" onClick={(e) => e.stopPropagation()}>
+              <div className="green-bg-200 skyBlue-600 d-flex justify-content-between align-items-center p-3">
                 <h6 className="mb-0 fw-bold fs-5">Withdraw Funds</h6>
-                <i className="text-secondary fs-5" onClick={()=>setWithdraw(false)}><RxCross1/></i>
+                <i onClick={()=>setWithdraw(false)}><RxCross1 className="skyBlue-600 fs-5"/></i>
               </div>
-              <div className="border"></div>
+
               <form>
-                <div className="p-3">
+                <div className="green-bg-50 p-3">
                   <div class="mb-3">
                     <label for="amount" class="form-label">Amount ($)</label>
                     <input type="email" class="form-control" id="amount" placeholder="Enter amount"/>
@@ -94,10 +92,10 @@ const WalletBalance = () => {
                     </select>
                   </div>
                 </div>
-                <div className="border"></div>
-                <div className="d-flex gap-3 justify-content-end p-3">
-                  <button className="btn btn-secondary">Cancel</button>
-                  <button className="btn btn-warning">Request Withdrawl</button>
+
+                <div className="green-bg-200 d-flex gap-3 justify-content-end p-3">
+                  <button className="sky-bg-100 px-3 py-1 skyBlue-border-200  rounded-3">Cancel</button>
+                  <button className="sky-bg-600 text-white px-3 py-1 border-0 rounded-3">Request Withdrawl</button>
                 </div>
               </form>
             </div>

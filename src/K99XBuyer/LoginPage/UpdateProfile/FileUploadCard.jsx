@@ -35,7 +35,7 @@ const FileUploadCard = ({ label, name, required, onChange }) => {
   }
 
   return (
-    <section className="card-bg-secondary shadow-sm rounded-2 p-4">
+    <section className="sky-bg-50 shadow-sm rounded-2 p-4">
        <p className="fw-bold text-center">{label} 
         {required && <span className="ms-2 text-danger">*</span>}</p>
 

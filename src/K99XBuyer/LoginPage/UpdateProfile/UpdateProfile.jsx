@@ -4,9 +4,9 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import PasswordInput from "./PasswordInput";
-import NavLogin from "../NavLogin";
 import FooterBuyer from "../../FooterBuyer/FooterBuyer";
 import { motion } from "framer-motion";
+import NavLogin from "../NavLogin";
 
 const UpdateProfile = () => {
   const navigate = useNavigate();
@@ -55,23 +55,26 @@ const UpdateProfile = () => {
 
   return (
     <>
+    {/* Navbar */}
     <NavLogin/>
-    <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
+
+    {/* Main */}
+    <section className="tintorange-bg p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
       {/* title */}
-       <motion.h2 className="primary-title mb-4 mb-lg-5"
+       <motion.h2 className="blue-color title mb-4 mb-lg-5"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
        >
         Update Your Profile</motion.h2>
       {/* Form - Update Profile */}
-      <form className="p-4 shadow rounded-3 card-bg w-100" onSubmit={formik.handleSubmit}>
-        <h5 className="primary-second-title mb-1">Basic Details</h5>
+      <form className="p-4 p-sm-5 shadow rounded-4 green-bg-50 w-100" onSubmit={formik.handleSubmit}>
+        <h5 className="green-color fs-5 fw-bold mb-1">Basic Details</h5>
         <p className="text-secondary">Please update your basic details.</p>
 
         <div className="row mb-4 gy-4">
           <div className="col-sm-6">
-            <label className="form-label fw-bold">First Name <span className="ms-1 secondary-color">*</span></label>
+            <label className="form-label fw-bold">First Name <span className="ms-1 text-danger">*</span></label>
             <input
               type="text"
               className="form-control"
@@ -82,7 +85,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Last Name <span className="ms-1 secondary-color">*</span></label>
+            <label className="form-label fw-bold">Last Name <span className="ms-1 text-danger">*</span></label>
             <input
               type="text"
               className="form-control"
@@ -107,7 +110,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Mobile Number <span className="ms-1 secondary-color">*</span></label>
+            <label className="form-label fw-bold">Mobile Number <span className="ms-1 text-danger">*</span></label>
             <input
               type="tel"
               className="form-control"
@@ -120,7 +123,7 @@ const UpdateProfile = () => {
         </div>
 
         <div className="col-sm-6 mb-4">
-          <label className="form-label fw-bold">State <span className="ms-1 secondary-color">*</span></label>
+          <label className="form-label fw-bold">State <span className="ms-1 text-danger">*</span></label>
           <select
             className="form-select"
             {...formik.getFieldProps("state")}
@@ -136,7 +139,7 @@ const UpdateProfile = () => {
         </div>
         
         {/* ID Proof */}
-        <h5 className="primary-second-title mb-1">Your ID Proof</h5>
+        <h5 className="green-color fs-5 fw-bold mb-1">Your ID Proof</h5>
         <p className="text-secondary">Please enter your ID Proof details.</p>
 
         <div className="row mb-4 gy-4">
@@ -152,7 +155,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Pan Card <span className="ms-1 secondary-color">*</span></label>
+            <label className="form-label fw-bold">Pan Card <span className="ms-1 text-danger">*</span></label>
             <input
               type="text"
               className="form-control"
@@ -165,19 +168,19 @@ const UpdateProfile = () => {
         </div>
 
         {/* Password */}
-        <h5 className="primary-second-title mb-1">Set Your Password</h5>
+        <h5 className="green-color fs-5 fw-bold mb-1">Set Your Password</h5>
         <p className="text-secondary">Required to login to your account.</p>
 
         <div className="row mb-4 gy-4">
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Password <span className="ms-1 secondary-color">*</span></label>
+            <label className="form-label fw-bold">Password <span className="ms-1 text-danger">*</span></label>
             <PasswordInput
              placeholder="Enter Your Password"
              name="password"
              value={formik.values.password}
              onChange={formik.handleChange}
              onBlur={formik.handleBlur}/>
-            <small className="secondary-color">
+            <small className="blue-color">
               At least 6 chars, A-Z, a-z, 0-9, symbol
             </small>
             {formik.touched.password && formik.errors.password && (
@@ -185,7 +188,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="col-sm-6">
-            <label className="form-label fw-bold">Confirm Password <span className="ms-1 secondary-color">*</span></label>
+            <label className="form-label fw-bold">Confirm Password <span className="ms-1 text-danger">*</span></label>
             <PasswordInput
              placeholder="Enter Confirm Password"
              name="confirmPassword"
@@ -200,7 +203,7 @@ const UpdateProfile = () => {
 
         <motion.button 
           type="submit" 
-          className="px-5 py-2 primary-btn" 
+          className="px-5 py-2 green-darkBg text-white text-decoration-none rounded-4 border-0" 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
@@ -209,6 +212,8 @@ const UpdateProfile = () => {
         </motion.button>
       </form>
     </section>
+
+    {/* Footer */}
     <FooterBuyer/>
     </>
   );

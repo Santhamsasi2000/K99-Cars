@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 
 const LiveAuction = () => {
   return (
-     <section className="shadow-sm">
+     <section className="col-8 shadow-sm m-5">
      <div className="row gy-5 gx-0">
       <div className="col-xl-8">
         <div className="row gy-4">

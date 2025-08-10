@@ -22,6 +22,17 @@ body
   text-transform: uppercase;
 }
 
+.buyer-title
+{
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: clamp(24px, 2.08vw + 14.5px, 35px);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+
+
 .primary-second-title
 {
   color: #15803d;
@@ -93,7 +104,6 @@ body
   text-decoration: none;
 }
 
-
 /* Button */
 .primary-btn
 {
@@ -120,22 +130,29 @@ body
 {
   box-shadow: none;
   outline: none;
-  border-color: var(--secondary-color); /* Optional: same as default border */
+  border-color: var(--green-color); /* Optional: same as default border */
 }
 
 .form-select:focus
 {
-  border: 2px solid  var(--secondary-color);
+  border: 2px solid  var(--green-color);
   outline: none;
   box-shadow: none;
 }
 
+input[type="checkbox"].form-check-input
+{
+  box-shadow: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
 input[type="checkbox"].form-check-input:checked 
 {
-  background-color: var(--secondary-color); /* Change this to your desired color */
+  background-color: var(--green-color); 
   border-color: #28a745;
-  box-shadow: none;
   outline: none;
+  box-shadow: 0 0 0 4px rgba(1, 149, 39, 0.4); 
 }
 
 

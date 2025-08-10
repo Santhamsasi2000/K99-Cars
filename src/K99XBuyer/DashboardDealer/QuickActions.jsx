@@ -12,37 +12,38 @@ const QuickActions = () => {
   return (
     <>
     <section className="my-5 rounded-2 shadow overflow-hidden">
-      <p className="navbar-bg secondary-color fw-bold mb-0 py-2 px-3 fs-5">
+      <p className="green-bg-200 skyBlue-700 fw-bold mb-0 py-2 px-3 fs-5">
         <HiLightningBolt className="fs-4 me-1"/>
         Quick Actions
       </p>
-      <div className="card-bg p-3">
+      <div className="green-bg-50 p-3">
         <div className="row gy-4">
           <div className="col-sm-6 col-md-3">
             <NavLink to="/nav-dashboard/auctions" 
             className="w-100 d-flex justify-content-center 
-            align-items-center gap-2 secondary-outline-btn">
+            align-items-center gap-2 skyBlue-outline-btn">
               <FaSearch/>
               Browse Auctions
             </NavLink>
           </div>
           <div className="col-sm-6 col-md-3">
             <button onClick={()=> setShowWatchlist(true)}
-             className="w-100 secondary-outline-btn d-flex justify-content-center align-items-center gap-2">
+             className="w-100 skyBlue-outline-btn d-flex justify-content-center 
+             align-items-center gap-2">
                 <FaEye />
               My Watchlist
             </button>
           </div>
           <div className="col-sm-6 col-md-3">
             <NavLink to="/nav-dashboard/my-account" 
-            className="w-100 secondary-outline-btn d-flex 
-            justify-content-center align-items-center gap-2 py-2">
+            className="w-100 skyBlue-outline-btn d-flex 
+            justify-content-center align-items-center gap-2">
               <FaPlus />
               Add Funds
             </NavLink>
           </div>
           <div className="col-sm-6 col-md-3">
-            <button onClick={()=> setShowReports(true)} className="secondary-outline-btn w-100 d-flex justify-content-center align-items-center gap-2">
+            <button onClick={()=> setShowReports(true)} className="skyBlue-outline-btn w-100 d-flex justify-content-center align-items-center gap-2">
               <FaChartBar />
               Reports
             </button>

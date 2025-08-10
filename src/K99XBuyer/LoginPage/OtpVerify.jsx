@@ -54,10 +54,10 @@ const OtpVerify = () => {
   return (
     <>
      <NavLogin/>
-     <section className="p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
-      <h2 className="primary-title mb-4">OTP Verification</h2>
+     <section className="tintorange-bg p-3 p-sm-4 p-md-5 d-flex flex-column align-items-center w-100">
+      <h2 className="title blue-color mb-4">OTP Verification</h2>
 
-      <form className="card-bg rounded-3 p-4 p-sm-5 shadow d-flex flex-column" onSubmit={formik.handleSubmit}>
+      <form className="blue-bg-50 rounded-4 p-4 p-sm-5 shadow d-flex flex-column" onSubmit={formik.handleSubmit}>
         <p className="mb-0">OTP sent to 6369499234</p>
 
         <div className="d-flex gap-3 my-4">
@@ -75,15 +75,15 @@ const OtpVerify = () => {
           ))}
         </div>
 
-        <button type="submit" className="primary-btn py-2 mb-3">
+        <button type="submit" className="green-bg text-white border-0 rounded-4 py-2 mb-3">
           Verify OTP
         </button>
 
         <div className="mt-3">
           {seconds > 0 ? (
-            <span className="secondary-color">Resend OTP in {seconds}s</span>
+            <span className="skyBlue-600">Resend OTP in {seconds}s</span>
           ) : (
-            <button className="secondary-color text-decoration-underline bg-transparent border-0 p-0" onClick={handleResend}>
+            <button className="skyBlue-600 text-decoration-underline bg-transparent border-0 p-0" onClick={handleResend}>
               Resend OTP
             </button>
           )}

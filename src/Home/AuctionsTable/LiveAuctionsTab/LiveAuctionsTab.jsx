@@ -8,7 +8,22 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const LiveAuctionsTab = () => {
     const [activeTab, setActiveTab] = useState("bank");
 
-   // Animation variant for form transition
+    //Parent variant for stagger effect
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+        }
+    };
+
+    //Each button animation
+    const buttonVariant = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y:0 }
+    };
+
+   // Tab Content animation
     const formVariants = {
         initial: { opacity:0, y:30 },
         animate: { opacity:1, y:0 },
@@ -18,8 +33,14 @@ const LiveAuctionsTab = () => {
   return (
      <section>
 
-        {/* Tab Button */}
-        <div className="d-flex justify-content-center gap-3 gap-sm-4">
+        {/* Tab Buttons with Stagger Animation */}
+        <motion.div 
+          className="d-flex justify-content-center gap-3 gap-sm-4"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
             <motion.button 
                 type="button"
                 className={`sub-tabBtn shadow-sm px-3 px-md-5 px-sm-4 py-2
@@ -52,7 +73,7 @@ const LiveAuctionsTab = () => {
                 <LazyLoadImage src="/Images/Home/Auctions/consumer-auction.png" className="subTab-icon"/>
                Consumer
             </motion.button>
-        </div>
+        </motion.div>
 
         {/* Dynamic Form Content*/}
         <AnimatePresence mode="wait" initial={false}>
