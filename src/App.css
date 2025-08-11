@@ -1,7 +1,6 @@
 body
 {
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: "M PLUS Rounded 1c", sans-serif;
+   font-family: "DM Sans", sans-serif;
 }
 
 /* common-btn */
@@ -15,7 +14,6 @@ body
 /* ========== Primary Color =============*/
 .title
 {
-  font-family: "Inter", sans-serif;
   text-align: center;
   font-size: clamp(35px, 1.67vw + 19.65px, 45px);
   font-weight: 900;
@@ -24,7 +22,6 @@ body
 
 .buyer-title
 {
-  font-family: "Inter", sans-serif;
   text-align: center;
   font-size: clamp(24px, 2.08vw + 14.5px, 35px);
   font-weight: 900;

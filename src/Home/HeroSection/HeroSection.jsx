@@ -51,8 +51,8 @@ const AnimatedText = ({ text, className }) => {
 
 const HeroSection = () => {
   return (
-  <>
-    <section className="tintorange-bg px-3 px-sm-4 px-md-5 pt-3 pt-sm-4 pt-md-5 mt-5">
+  <section className="hero-section">
+    <div className="tintorange-bg px-3 px-sm-4 px-md-5">
       <div className="row justify-content-between gy-4 gx-0">
         <div className="col-lg-6">
           {/* Animated Titles */}
@@ -67,7 +67,7 @@ const HeroSection = () => {
             <CarOfferForm/>
         </div>
       </div>
-    </section>
+    </div>
 
     {/* Instant Offer Btn */}
     <div className="px-3 px-sm-4 px-md-5 row justify-content-center justify-content-lg-end align-items-end gx-0 w-100">
@@ -81,7 +81,7 @@ const HeroSection = () => {
         {/* to="/instant-offer" */}
       </div>
     </div>
-  </>
+  </section>
   )
 }
 
